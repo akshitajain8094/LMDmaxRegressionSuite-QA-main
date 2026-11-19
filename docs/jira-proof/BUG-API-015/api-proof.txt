@@ -1,0 +1,1570 @@
+=== TC-16: Verify that a missing transporter ID is rejected (BUG-API-015)
+tests/api/drivers/add-driver.spec.js:607
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver
+Status: 409
+
+Answer:
+{
+  "success": false,
+  "message": "email address and phone number already exists",
+  "data": {
+    "current": {
+      "transporter_id": null,
+      "name": "Jordan Whitaker",
+      "company_ownership_id": "281",
+      "phone": "*** hidden ***",
+      "user_type": "driver",
+      "role": "driver",
+      "station_code": [
+        "541"
+      ],
+      "id": null,
+      "email": "*** hidden ***",
+      "company_id": "541"
+    },
+    "conflicted": [
+      {
+        "conflicted_table": "drivers",
+        "conflict_kind": "driver_same_station",
+        "has_station_conflict": false,
+        "added_by_type": "1",
+        "transporter_id": "A2JW7QK4M9TXRB",
+        "conflict_type": "same_company",
+        "name": "Jordan Whitaker",
+        "company_ownership_id": "281",
+        "company_name": "PAPAYA LMD",
+        "dsp_short_code": "Paya",
+        "phone": "*** hidden ***",
+        "user_type": "driver",
+        "conflict_type_check": "primary",
+        "status": "active",
+        "overlapping_station_codes": [
+          541
+        ],
+        "role": "driver",
+        "added_by": "6873",
+        "matched_on": [
+          "email",
+          "phone"
+        ],
+        "id": "38267",
+        "station_codes": [
+          541
+        ],
+        "email": "*** hidden ***",
+        "company_id": "541",
+        "company": "541",
+        "new_stations": []
+      }
+    ],
+    "conflicted_columns": [
+      "email address",
+      "phone number"
+    ],
+    "conflicted_columns_data": {
+      "email": "*** hidden ***",
+      "phone": "*** hidden ***"
+    }
+  },
+  "metadata": null,
+  "status": 409,
+  "action": "insert_driver",
+  "signature": "1794821367790.C7SvygoFaLFnR",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 409
+
+
+=== TC-17: Verify that an unknown status (xyz) is rejected (BUG-API-015)
+tests/api/drivers/add-driver.spec.js:634
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver
+Status: 409
+
+Answer:
+{
+  "success": false,
+  "message": "email address, phone number and transporter id already exists",
+  "data": {
+    "current": {
+      "transporter_id": "A2JW7QK4M9TXRB",
+      "name": "Jordan Whitaker",
+      "company_ownership_id": "281",
+      "phone": "*** hidden ***",
+      "user_type": "driver",
+      "role": "driver",
+      "station_code": [
+        "541"
+      ],
+      "id": null,
+      "email": "*** hidden ***",
+      "company_id": "541"
+    },
+    "conflicted": [
+      {
+        "conflicted_table": "drivers",
+        "conflict_kind": "driver_same_station",
+        "has_station_conflict": false,
+        "added_by_type": "1",
+        "transporter_id": "A2JW7QK4M9TXRB",
+        "conflict_type": "same_company",
+        "name": "Jordan Whitaker",
+        "company_ownership_id": "281",
+        "company_name": "PAPAYA LMD",
+        "dsp_short_code": "Paya",
+        "phone": "*** hidden ***",
+        "user_type": "driver",
+        "conflict_type_check": "primary",
+        "status": "active",
+        "overlapping_station_codes": [
+          541
+        ],
+        "role": "driver",
+        "added_by": "6873",
+        "matched_on": [
+          "email",
+          "phone",
+          "transporter_id"
+        ],
+        "id": "38267",
+        "station_codes": [
+          541
+        ],
+        "email": "*** hidden ***",
+        "company_id": "541",
+        "company": "541",
+        "new_stations": []
+      }
+    ],
+    "conflicted_columns": [
+      "email address",
+      "phone number",
+      "transporter id"
+    ],
+    "conflicted_columns_data": {
+      "email": "*** hidden ***",
+      "phone": "*** hidden ***",
+      "transporter_id": "A2JW7QK4M9TXRB"
+    }
+  },
+  "metadata": null,
+  "status": 409,
+  "action": "insert_driver",
+  "signature": "1794821367829.BiKq4vAfAMJJt",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 409
+
+
+=== TC-18: Verify that a name longer than 35 characters is rejected (BUG-API-015)
+tests/api/drivers/add-driver.spec.js:662
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver
+Status: 409
+
+Answer:
+{
+  "success": false,
+  "message": "Multiple conflicts found",
+  "data": {
+    "current": {
+      "transporter_id": "A2JW7QK4M9TXRB",
+      "name": "Jordan Whitaker Montgomery-Ellington",
+      "company_ownership_id": "281",
+      "phone": "*** hidden ***",
+      "user_type": "driver",
+      "role": "driver",
+      "station_code": [
+        "541"
+      ],
+      "id": null,
+      "email": "*** hidden ***",
+      "company_id": "541"
+    },
+    "conflicted": [
+      {
+        "conflicted_table": "drivers",
+        "conflict_kind": "driver_same_station",
+        "has_station_conflict": false,
+        "added_by_type": "1",
+        "transporter_id": "A2JW7QK4M9TXRB",
+        "conflict_type": "same_company",
+        "name": "Jordan Whitaker",
+        "company_ownership_id": "281",
+        "company_name": "PAPAYA LMD",
+        "dsp_short_code": "Paya",
+        "phone": "*** hidden ***",
+        "user_type": "driver",
+        "conflict_type_check": "primary",
+        "status": "active",
+        "overlapping_station_codes": [
+          541
+        ],
+        "role": "driver",
+        "added_by": "6873",
+        "matched_on": [
+          "email",
+          "phone",
+          "transporter_id"
+        ],
+        "id": "38267",
+        "station_codes": [
+          541
+        ],
+        "email": "*** hidden ***",
+        "company_id": "541",
+        "company": "541",
+        "new_stations": []
+      },
+      {
+        "conflicted_table": "drivers",
+        "conflict_kind": "driver_same_station",
+        "has_station_conflict": false,
+        "added_by_type": "1",
+        "transporter_id": "A3RT8LK2P5QZNV",
+        "conflict_type": "same_company",
+        "name": "Riley Thompson",
+        "company_ownership_id": "281",
+        "company_name": "PAPAYA LMD",
+        "dsp_short_code": "Paya",
+        "phone": "*** hidden ***",
+        "user_type": "driver",
+        "conflict_type_check": "primary",
+        "status": "active",
+        "overlapping_station_codes": [
+          541
+        ],
+        "role": "driver",
+        "added_by": "6873",
+        "matched_on": [
+          "phone"
+        ],
+        "id": "38308",
+        "station_codes": [
+          541
+        ],
+        "email": "*** hidden ***",
+        "company_id": "541",
+        "company": "541",
+        "new_stations": []
+      }
+    ],
+    "conflicted_columns": [
+      "email address",
+      "phone number",
+      "transporter id"
+    ],
+    "conflicted_columns_data": {
+      "email": "*** hidden ***",
+      "phone": "*** hidden ***",
+      "transporter_id": "A2JW7QK4M9TXRB"
+    }
+  },
+  "metadata": null,
+  "status": 409,
+  "action": "insert_driver",
+  "signature": "1794821368018.bvleU2Ym5MgdY",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 409
+
+
+=== TC-19: Verify that a station the user cannot open is rejected with 400 (BUG-API-015)
+tests/api/drivers/add-driver.spec.js:691
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver
+Status: 409
+
+Answer:
+{
+  "success": false,
+  "message": "Multiple conflicts found",
+  "data": {
+    "current": {
+      "transporter_id": "A2JW7QK4M9TXRB",
+      "name": "Jordan Whitaker",
+      "company_ownership_id": "281",
+      "phone": "*** hidden ***",
+      "user_type": "driver",
+      "role": "driver",
+      "station_code": [
+        "999999"
+      ],
+      "id": null,
+      "email": "*** hidden ***",
+      "company_id": "541"
+    },
+    "conflicted": [
+      {
+        "conflicted_table": "drivers",
+        "conflict_kind": "driver_different_station",
+        "has_station_conflict": true,
+        "added_by_type": "1",
+        "transporter_id": "A2JW7QK4M9TXRB",
+        "conflict_type": "cross_company",
+        "name": "Jordan Whitaker",
+        "company_ownership_id": "281",
+        "company_name": "PAPAYA LMD",
+        "dsp_short_code": "Paya",
+        "phone": "*** hidden ***",
+        "user_type": "driver",
+        "conflict_type_check": "primary",
+        "status": "active",
+        "overlapping_station_codes": [],
+        "role": "driver",
+        "added_by": "6873",
+        "matched_on": [
+          "email",
+          "phone",
+          "transporter_id",
+          "station_code"
+        ],
+        "id": "38267",
+        "station_codes": [
+          541
+        ],
+        "email": "*** hidden ***",
+        "company_id": "541",
+        "company": "541",
+        "new_stations": [
+          999999
+        ]
+      },
+      {
+        "conflicted_table": "drivers",
+        "conflict_kind": "driver_different_station",
+        "has_station_conflict": true,
+        "added_by_type": "1",
+        "transporter_id": "A3RT8LK2P5QZNV",
+        "conflict_type": "cross_company",
+        "name": "Riley Thompson",
+        "company_ownership_id": "281",
+        "company_name": "PAPAYA LMD",
+        "dsp_short_code": "Paya",
+        "phone": "*** hidden ***",
+        "user_type": "driver",
+        "conflict_type_check": "primary",
+        "status": "active",
+        "overlapping_station_codes": [],
+        "role": "driver",
+        "added_by": "6873",
+        "matched_on": [
+          "phone",
+          "station_code"
+        ],
+        "id": "38308",
+        "station_codes": [
+          541
+        ],
+        "email": "*** hidden ***",
+        "company_id": "541",
+        "company": "541",
+        "new_stations": [
+          999999
+        ]
+      }
+    ],
+    "conflicted_columns": [
+      "email address",
+      "phone number",
+      "transporter id",
+      "station"
+    ],
+    "conflicted_columns_data": {
+      "email": "*** hidden ***",
+      "phone": "*** hidden ***",
+      "transporter_id": "A2JW7QK4M9TXRB",
+      "station_code": [
+        999999
+      ]
+    }
+  },
+  "metadata": null,
+  "status": 409,
+  "action": "insert_driver",
+  "signature": "1794821368109.k1tVfpYMaalqJ",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 409
+
+
+=== TC-08: Verify that an unknown status ("xyz") is rejected (BUG-API-015)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:557
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/statusUpdate
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": 1,
+  "metadata": null,
+  "status": 200,
+  "action": "update_bulk_status_drivers",
+  "signature": "1794821374485.N6d6woufK7gc1",
+  "type": "drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/statusUpdate
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": 1,
+  "metadata": null,
+  "status": 200,
+  "action": "update_bulk_status_drivers",
+  "signature": "1794821374806.YMBAZUK9nK4Mg",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-09: Verify that Edit refuses a name longer than 35 characters (BUG-API-015)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:584
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 201
+
+Answer:
+{
+  "success": true,
+  "message": "updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 201,
+  "action": "update_driver",
+  "signature": "1794821376552.uWfatQjtgqldO",
+  "type": "drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 201
+
+Answer:
+{
+  "success": true,
+  "message": "updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 201,
+  "action": "update_driver",
+  "signature": "1794821376904.xWLZFbti2G8SN",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 201
+
+
+=== TC-03: Verify that a threshold value that is not a number is rejected (BUG-API-015)
+tests/api/settings/threshold-journeys.spec.js:135
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/threshold/v3/threshold/weekly
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Success",
+  "data": {
+    "_id": "6a7aabb60fbd6d9d98d95034",
+    "threshold": [
+      {
+        "field": "delivered",
+        "enable": true,
+        "order": "normal",
+        "values": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "field": "fico_score",
+        "enable": true,
+        "order": "normal",
+        "values": [
+          {
+            "value": "800"
+          },
+          {
+            "value": "800"
+          }
+        ]
+      },
+      {
+        "field": "seatbelt_off_rate",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "field": "speeding_event_rate",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "field": "distractions_rate",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "field": "following_distance_rate",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": 0
+          },
+          {
+            "value": 0
+          }
+        ]
+      },
+      {
+        "field": "sign_signal_violations_rate",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": 0
+          },
+          {
+            "value": 0
+          }
+        ]
+      },
+      {
+        "field": "cdf_dpmo",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": "1159"
+          },
+          {
+            "value": "1159"
+          }
+        ]
+      },
+      {
+        "field": "ced",
+        "enable": false,
+        "order": "normal",
+        "values": [
+          {
+            "value": 0
+          },
+          {
+            "value": 0
+          }
+        ]
+      },
+      {
+        "field": "dc_dpmo",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": 3900
+          },
+          {
+            "value": 3900
+          }
+        ]
+      },
+      {
+        "field": "dsb",
+        "enable": false,
+        "order": "normal",
+        "values": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "field": "pod",
+        "enable": true,
+        "order": "normal",
+        "values": [
+          {
+            "value": "98"
+          },
+          {
+            "value": "98"
+          }
+        ]
+      },
+      {
+        "field": "psb",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": "10"
+          },
+          {
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "field": "dsb_count",
+        "enable": true,
+        "order": "reverse",
+        "values": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "field": "pod_opps",
+        "enable": false,
+        "order": "normal",
+        "values": [
+          {
+            "value": 0
+          },
+          {
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "company_id": "541",
+    "is_active": true,
+    "type": "weekly",
+    "scorecard_type": "scorecard_link",
+    "template": "Hi ${driver_name},\nPlease check your performance metrics for week number by clicking on the link - Link -\n${link}\nThanks!",
+    "created_at": "2026-08-11T04:57:26.051Z",
+    "updated_at": "2026-11-16T09:29:47.467Z",
+    "uuid": "258bae40-9541-11f1-b100-6bfe9b4ddb36",
+    "__v": 0
+  },
+  "metadata": {
+    "data": [
+      {
+        "_id": "6a7d9b858c16240be8b8d51c",
+        "threshold": [
+          {
+            "field": "opportunities",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "success",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "bypass",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "rejects",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "blurry_photo",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "human_in_the_picture",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "no_package_detected",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "package_in_car",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "package_in_hand",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "package_not_clearly_visible",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "package_too_close",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "photo_too_dark",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "other",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          }
+        ],
+        "company_id": "541",
+        "is_active": true,
+        "type": "pod",
+        "created_at": "2026-08-13T10:25:09.392Z",
+        "updated_at": "2026-08-27T04:34:48.561Z",
+        "uuid": "42a2e810-9701-11f1-9a44-2198ecfc8653",
+        "__v": 0
+      },
+      {
+        "_id": "6a7d9b858c16240be8b8d51d",
+        "threshold": [
+          {
+            "field": "driver_mishandled_package",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "driver_was_unprofessional",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "driver_did_not_follow_my_delivery_instructions",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "delivered_to_wrong_address",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "never_received_delivery",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "received_wrong_item",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          }
+        ],
+        "company_id": "541",
+        "is_active": true,
+        "type": "cdf",
+        "created_at": "2026-08-13T10:25:09.392Z",
+        "updated_at": "2026-08-13T10:25:09.392Z",
+        "uuid": "42a2e811-9701-11f1-9a44-2198ecfc8653",
+        "__v": 0
+      },
+      {
+        "_id": "6a7d9b858c16240be8b8d51e",
+        "threshold": [
+          {
+            "field": "impacts_dsb",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "delivery_type",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "simultaneous_deliveries",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "delivered_>_50_m",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "incorrect_scan_usage___attended_delivery",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "incorrect_scan_usage___unattended_delivery",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "no_pod_on_delivery",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "field": "scanned___not_delivered___not_returned",
+            "enable": true,
+            "order": "normal",
+            "values": [
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          }
+        ],
+        "company_id": "541",
+        "is_active": true,
+        "type": "delivery_concessions",
+        "created_at": "2026-08-13T10:25:09.392Z",
+        "updated_at": "2026-08-13T10:25:09.392Z",
+        "uuid": "42a2e812-9701-11f1-9a44-2198ecfc8653",
+        "__v": 0
+      }
+    ]
+  },
+  "status": 200,
+  "action": "threshold_controller",
+  "signature": "1794821388496.UGkoEAuZlhBvL",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/threshold/v3/threshold
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Success",
+  "data": [
+    {
+      "_id": "6a7aabb60fbd6d9d98d95034",
+      "threshold": [
+        {
+          "field": "delivered",
+          "enable": true,
+          "order": "normal",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "fico_score",
+          "enable": true,
+          "order": "normal",
+          "values": [
+            {
+              "value": "abc"
+            },
+            {
+              "value": "abc"
+            }
+          ]
+        },
+        {
+          "field": "seatbelt_off_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "speeding_event_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "distractions_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "following_distance_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        },
+        {
+          "field": "sign_signal_violations_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        },
+        {
+          "field": "cdf_dpmo",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "1159"
+            },
+            {
+              "value": "1159"
+            }
+          ]
+        },
+        {
+          "field": "ced",
+          "enable": false,
+          "order": "normal",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        },
+        {
+          "field": "dc_dpmo",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": 3900
+            },
+            {
+              "value": 3900
+            }
+          ]
+        },
+        {
+          "field": "dsb",
+          "enable": false,
+          "order": "normal",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "pod",
+          "enable": true,
+          "order": "normal",
+          "values": [
+            {
+              "value": "98"
+            },
+            {
+              "value": "98"
+            }
+          ]
+        },
+        {
+          "field": "psb",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "10"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "field": "dsb_count",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "pod_opps",
+          "enable": false,
+          "order": "normal",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "company_id": "541",
+      "is_active": true,
+      "type": "weekly",
+      "scorecard_type": "scorecard_link",
+      "template": "Hi ${driver_name},\nPlease check your performance metrics for week number by clicking on the link - Link -\n${link}\nThanks!",
+      "created_at": "2026-08-11T04:57:26.051Z",
+      "updated_at": "2026-11-16T09:29:48.803Z",
+      "uuid": "258bae40-9541-11f1-b100-6bfe9b4ddb36",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "threshold_controller",
+  "signature": "1794821388798.bvU3pbuhytCdT",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/threshold/v3/threshold
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Success",
+  "data": [
+    {
+      "_id": "6a7aabb60fbd6d9d98d95034",
+      "threshold": [
+        {
+          "field": "delivered",
+          "enable": true,
+          "order": "normal",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "fico_score",
+          "enable": true,
+          "order": "normal",
+          "values": [
+            {
+              "value": "800"
+            },
+            {
+              "value": "800"
+            }
+          ]
+        },
+        {
+          "field": "seatbelt_off_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "speeding_event_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "distractions_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "following_distance_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        },
+        {
+          "field": "sign_signal_violations_rate",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        },
+        {
+          "field": "cdf_dpmo",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "1159"
+            },
+            {
+              "value": "1159"
+            }
+          ]
+        },
+        {
+          "field": "ced",
+          "enable": false,
+          "order": "normal",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        },
+        {
+          "field": "dc_dpmo",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": 3900
+            },
+            {
+              "value": 3900
+            }
+          ]
+        },
+        {
+          "field": "dsb",
+          "enable": false,
+          "order": "normal",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "pod",
+          "enable": true,
+          "order": "normal",
+          "values": [
+            {
+              "value": "98"
+            },
+            {
+              "value": "98"
+            }
+          ]
+        },
+        {
+          "field": "psb",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "10"
+            },
+            {
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "field": "dsb_count",
+          "enable": true,
+          "order": "reverse",
+          "values": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "field": "pod_opps",
+          "enable": false,
+          "order": "normal",
+          "values": [
+            {
+              "value": 0
+            },
+            {
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "company_id": "541",
+      "is_active": true,
+      "type": "weekly",
+      "scorecard_type": "scorecard_link",
+      "template": "Hi ${driver_name},\nPlease check your performance metrics for week number by clicking on the link - Link -\n${link}\nThanks!",
+      "created_at": "2026-08-11T04:57:26.051Z",
+      "updated_at": "2026-11-16T09:29:49.119Z",
+      "uuid": "258bae40-9541-11f1-b100-6bfe9b4ddb36",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "threshold_controller",
+  "signature": "1794821389114.SSajNcRV5E8Z1",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200

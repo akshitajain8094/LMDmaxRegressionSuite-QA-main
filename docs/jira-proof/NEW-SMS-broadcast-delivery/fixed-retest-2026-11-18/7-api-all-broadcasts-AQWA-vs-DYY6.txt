@@ -1,0 +1,53 @@
+messages checked: 27, different between stations: 0
+broadcasts: 12
+
+"abhijeet , Abraham Osher and 102 more" station 477: AQWA sees 9 msgs, DYY6 sees 9
+  same "test 3" total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+  same "heeeelllooo" total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+  same "test 2" total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+  same "test" total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+  same "hi" total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+  same "hey " total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+  same "hello " total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+  same "fffff" total 1: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+  same "fffff" total 104: list AQWA 5 / DYY6 5, status AQWA 5 / DYY6 5
+
+"newww" station 578: AQWA sees 4 msgs, DYY6 sees 4
+  same "llll" total 3: list AQWA 3 / DYY6 3, status AQWA 3 / DYY6 3
+  same "hii" total 3: list AQWA 3 / DYY6 3, status AQWA 3 / DYY6 3
+  same "nnnn" total 3: list AQWA 3 / DYY6 3, status AQWA 3 / DYY6 3
+  same "hiiii" total 3: list AQWA 3 / DYY6 3, status AQWA 3 / DYY6 3
+
+"HRRIIIIIIIIIIII , perchange and 2 more" station 578: AQWA sees 1 msgs, DYY6 sees 1
+  same "hi" total 4: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+
+"Abraham Osher , Alfred Adams and 1 more" station 578: AQWA sees 2 msgs, DYY6 sees 2
+  same "Dhfuf" total 3: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+  same "Hccjg" total 3: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+
+"Aksh , Alejandro Cortes Alvarado and 2 more" station 578: AQWA sees 1 msgs, DYY6 sees 1
+  same "Ggg" total 4: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+
+"abhijeet and Aksh" station 578: AQWA sees 2 msgs, DYY6 sees 2
+  same "Ghu" total 2: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+  same "Vvx" total 2: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+
+"Chad Elnahal , parcel and 1 more" station 477: AQWA sees 1 msgs, DYY6 sees 1
+  same "hiiiii" total 3: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+
+"alekh and Chad Elnahal" station 477: AQWA sees 2 msgs, DYY6 sees 2
+  same "hii" total 1: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+  same "hello" total 2: list AQWA 2 / DYY6 2, status AQWA 2 / DYY6 2
+
+"Abraham Osher , Ammar and 1 more" station 477: AQWA sees 1 msgs, DYY6 sees 1
+  same "dff" total 3: list AQWA 1 / DYY6 1, status AQWA 1 / DYY6 1
+
+"Andre Cirino" station 477: AQWA sees 1 msgs, DYY6 sees 1
+  same "hi" total 4: list AQWA 1 / DYY6 1, status AQWA 1 / DYY6 1
+
+"New" station 477: AQWA sees 1 msgs, DYY6 sees 1
+  same "chgbv" total 4: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+
+"alekh , anthony LoRe and 2 more" station 477: AQWA sees 2 msgs, DYY6 sees 2
+  same "Eswj" total 4: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0
+  same "Dkdj" total 4: list AQWA 0 / DYY6 0, status AQWA 0 / DYY6 0

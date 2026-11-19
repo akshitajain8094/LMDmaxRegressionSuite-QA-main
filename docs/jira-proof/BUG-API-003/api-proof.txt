@@ -1,0 +1,748 @@
+=== TC-16: Verify that a call-out with a wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/call-outs/call-out.spec.js:441
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/call_out/v2/call_out
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "call_out_report_staging validation failed: date: Cast to date failed for value \"21-09-2026\" (type string) at path \"date\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821360994.NZVeWQmICmCzt",
+  "type": "error",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "call_out_report_staging validation failed: date: Cast to date failed for value \"21-09-2026\" (type string) at path \"date\""
+
+
+=== TC-17: Verify that Excused? other than Yes or No returns a clear error message (BUG-API-003)
+tests/api/call-outs/call-out.spec.js:473
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/call_out/v2/call_out
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "call_out_report_staging validation failed: metrics.excused: `Maybe` is not a valid enum value for path `metrics.excused`.",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821361034.PhIg5Xm0a2epI",
+  "type": "error",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "validation failed"
+Received string:        "call_out_report_staging validation failed: metrics.excused: `Maybe` is not a valid enum value for path `metrics.excused`."
+
+
+=== TC-15: Verify that text as week_number (abc) returns a clear error message (BUG-API-003)
+tests/api/dashboard/dashboard-data-weekly.spec.js:332
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/dashboard_data_weekly?week_number=abc
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"abc\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_report",
+  "signature": "1794821362026.fUjeTAtL2qhYX",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"abc\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-16: Verify that a date-like week_number (2026-34) returns a clear error message (BUG-API-003)
+tests/api/dashboard/dashboard-data-weekly.spec.js:353
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/dashboard_data_weekly?week_number=2026-34
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"2026-34\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_report",
+  "signature": "1794821363031.Wa6L3SW4iwfOk",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"2026-34\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-21: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/dashboard/dashboard-drivers.spec.js:508
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/dashboard_drivers?start=01-09-2025&end=31-08-2026&report_name=writeupReport
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"report_date\" for model \"e_signature_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_drivers_by_report_and_metric",
+  "signature": "1794821363543.jXgdiSUKLtdNP",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: "Invalid start or end date. Expected format: YYYY-MM-DD"
+Received: "Cast to date failed for value \"Invalid Date\" (type Date) at path \"report_date\" for model \"e_signature_staging\""
+
+
+=== TC-22: Verify that impossible dates (2026-02-30, 2026-13-45) return a clear error message (BUG-API-003)
+tests/api/dashboard/dashboard-drivers.spec.js:535
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/dashboard_drivers?start=2026-02-30&end=2026-13-45&report_name=writeupReport
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"report_date\" for model \"e_signature_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_drivers_by_report_and_metric",
+  "signature": "1794821363819.dPjXeCx18vuVE",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: "Invalid start or end date. Expected format: YYYY-MM-DD"
+Received: "Cast to date failed for value \"Invalid Date\" (type Date) at path \"report_date\" for model \"e_signature_staging\""
+
+
+=== TC-14: Verify that text as week (abc) returns a clear error message (BUG-API-003)
+tests/api/dashboard/weekly-insights.spec.js:299
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=abc&end=xyz&type=dsp
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"xyz\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "weekly_insights",
+  "signature": "1794821365715.9Cpko3fDwQfIm",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"xyz\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-15: Verify that a date (2026-08-17, as Swagger says) returns a clear error message (BUG-API-003)
+tests/api/dashboard/weekly-insights.spec.js:320
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=2026-08-17&end=2026-08-23&type=dsp
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"2026-08-23\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "weekly_insights",
+  "signature": "1794821365711.3FSDzILv58Wox",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"2026-08-23\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-16: Verify that an impossible week (week 99) returns a clear error message (BUG-API-003)
+tests/api/dashboard/weekly-insights.spec.js:341
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=202699&end=202699&type=dsp
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "weekly_insights",
+  "signature": "1794821365644.0P6ouZY35VLHP",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-20: Verify that a wrong email returns a clear error message (BUG-API-003)
+tests/api/drivers/add-driver.spec.js:719
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "\"email\" with value \"jordan.whitaker.qa\" fails to match the required pattern: /^(?=.{1,254}$)(?=.{1,64}@)(?:(\"[^\"\\\\\\r\\n]+\")|([A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*))@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+[A-Za-z]{2,}|(?:\\[(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\]))$/",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821368117.x2tyxP7OSmaBk",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "fails to match the required pattern"
+Received string:        "\"email\" with value \"jordan.whitaker.qa\" fails to match the required pattern: /^(?=.{1,254}$)(?=.{1,64}@)(?:(\"[^\"\\\\\\r\\n]+\")|([A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*))@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+[A-Za-z]{2,}|(?:\\[(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\]))$/"
+
+
+=== TC-21: Verify that a wrong phone (5 digits) returns a clear error message (BUG-API-003)
+tests/api/drivers/add-driver.spec.js:747
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "\"phone\" with value \"55501\" fails to match the required pattern: /^\\+?\\d{10,12}$/",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821368106.yn9RVbIrAdfHl",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "fails to match the required pattern"
+Received string:        "\"phone\" with value \"55501\" fails to match the required pattern: /^\\+?\\d{10,12}$/"
+
+
+=== TC-14: Verify that Edit with an email that is not an email returns a clear error message (BUG-API-003)
+tests/api/drivers/driver-lifecycle.spec.js:355
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "\"email\" with value \"riley.thompson.qa\" fails to match the required pattern: /^(?=.{1,254}$)(?=.{1,64}@)(?:(\"[^\"\\\\\\r\\n]+\")|([A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*))@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+[A-Za-z]{2,}|(?:\\[(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\]))$/",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821368410.PGHCbt91Ar2A6",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "fails to match the required pattern"
+Received string:        "\"email\" with value \"riley.thompson.qa\" fails to match the required pattern: /^(?=.{1,254}$)(?=.{1,64}@)(?:(\"[^\"\\\\\\r\\n]+\")|([A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*))@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+[A-Za-z]{2,}|(?:\\[(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\]))$/"
+
+
+=== TC-15: Verify that Edit with a phone number of 5 digits returns a clear error message (BUG-API-003)
+tests/api/drivers/driver-lifecycle.spec.js:380
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "\"phone\" with value \"55501\" fails to match the required pattern: /^\\+?\\d{10,12}$/",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821369731.EH4qDItC5KP8G",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "fails to match the required pattern"
+Received string:        "\"phone\" with value \"55501\" fails to match the required pattern: /^\\+?\\d{10,12}$/"
+
+
+=== TC-13: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/attendance-dashboard.spec.js:281
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/attendance_dashboard?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"call_out_report_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821370319.RTFNs7EF2iwCa",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"call_out_report_staging\""
+
+
+=== TC-13: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/attendance-extras.spec.js:289
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/attendance_extras?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"call_out_report_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821370584.jv4pP7cXt7nFw",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"call_out_report_staging\""
+
+
+=== TC-11: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/delivery-dashboard.spec.js:242
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/delivery_dashboard?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"delivery_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821372043.YkyBWRTWJzz8S",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"delivery_report_v2_staging\""
+
+
+=== TC-18: Verify that text as week_number (abc) returns a clear error message (BUG-API-003)
+tests/api/graph-data/driver-compare-scorecard-graph.spec.js:482
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_compare_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=6&week_number=abc
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_report",
+  "signature": "1794821373910.DYcB3xHylLFWc",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-17: Verify that text as week_number (abc) returns a clear error message (BUG-API-003)
+tests/api/graph-data/driver-current-scorecard-graph.spec.js:452
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_current_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=6&week_number=abc
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_report",
+  "signature": "1794821375446.64MiT66ccXy3w",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-19: Verify that text as week_number (abc) returns a clear error message (BUG-API-003)
+tests/api/graph-data/dsp-scorecard-graph.spec.js:468
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/dsp_scorecard_graph?field=safety_and_compliance&range=6&week_number=abc
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_report",
+  "signature": "1794821376593.p5I0xv1tP03Q1",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-11: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/e-mentor-dashboard.spec.js:245
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/e_mentor_dashboard?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"e_mentor_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821377345.zOPtiaauRJUEp",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"e_mentor_report_v2_staging\""
+
+
+=== TC-11: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/eoc-dashboard.spec.js:241
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/eoc_dashboard?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"eoc_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821377910.vsf4iLsW0owX3",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"eoc_report_v2_staging\""
+
+
+=== TC-13: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/netradyne-dashboard.spec.js:294
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/netradyne_dashboard?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"netradyne_driver_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821378008.wFhiiRZwowkFp",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"netradyne_driver_report_v2_staging\""
+
+
+=== TC-11: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/quality-dashboard.spec.js:240
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/quality_dashboard?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"quality_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821379144.N0FSXgk4z7CDH",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"quality_report_v2_staging\""
+
+
+=== TC-13: Verify that wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/graph-data/rescue-dashboard.spec.js:281
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/rescue_dashboard?start=01-09-2025&end=31-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"rescue_report_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_daily_dashboard",
+  "signature": "1794821379826.1DinhVplule8K",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"rescue_report_staging\""
+
+
+=== TC-07: Verify that the rescue list with a wrong date format (DD-MM-YYYY) returns a clear error message (BUG-API-003)
+tests/api/rescues/rescue.spec.js:194
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue?date=13-08-2026
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"rescue_report_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821382447.miKKKw3goBS6X",
+  "type": "error",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to date failed"
+Received string:        "Cast to date failed for value \"Invalid Date\" (type Date) at path \"date\" for model \"rescue_report_staging\""
+
+
+=== TC-13: Verify that packages that are not a number return a clear error message (BUG-API-003)
+tests/api/rescues/rescue.spec.js:362
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "rescue_report_staging validation failed: metrics.number_of_packages: Cast to Number failed for value \"abc\" (type string) at path \"metrics.number_of_packages\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821382812.ylepEf1XSR2PK",
+  "type": "error",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "validation failed"
+Received string:        "rescue_report_staging validation failed: metrics.number_of_packages: Cast to Number failed for value \"abc\" (type string) at path \"metrics.number_of_packages\""
+
+
+=== TC-14: Verify that a status other than Completed or Refuse returns a clear error message (BUG-API-003)
+tests/api/rescues/rescue.spec.js:398
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "rescue_report_staging validation failed: metrics.status: `Maybe` is not a valid enum value for path `metrics.status`.",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821382866.GGCOpMyaGEWQE",
+  "type": "error",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "validation failed"
+Received string:        "rescue_report_staging validation failed: metrics.status: `Maybe` is not a valid enum value for path `metrics.status`."
+
+
+=== TC-07: Verify that the scorecard of week "abc" returns a clear error message (BUG-API-003)
+tests/api/scorecard/driver-scorecard.spec.js:200
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/scorecard/v2/compare?transporter_id=A3D7TKWA5X4ZCT&week_number=abc
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"abc\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "get_report",
+  "signature": "1794821384679.wHwIdBwk68Who",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"abc\" (type string) at path \"week_number\" for model \"scorecard_report_v2_staging\""
+
+
+=== TC-13: Verify that the rating of week "abc" returns a clear error message (BUG-API-003)
+tests/api/scorecard/driver-scorecard.spec.js:326
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/driver_rating/v2/get_driver_rating?driver_id=36363&week_number=abc
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"abc\" (type string) at path \"week_number\" for model \"driver_rating_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": null,
+  "type": "onetime_rating",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"abc\" (type string) at path \"week_number\" for model \"driver_rating_v2_staging\""
+
+
+=== TC-26: Verify that the POD report of week "abc" returns a clear error message (BUG-API-003)
+tests/api/scorecard/driver-scorecard.spec.js:628
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/pod/v2/pod_report?week_number=abc&transporter_id=A3D7TKWA5X4ZCT
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"pod_report_v2_staging\"",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": null,
+  "signature": "1794821386681.Tp7SPSUxC6ed8",
+  "type": "get_report",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cast to Number failed"
+Received string:        "Cast to Number failed for value \"NaN\" (type number) at path \"week_number\" for model \"pod_report_v2_staging\""

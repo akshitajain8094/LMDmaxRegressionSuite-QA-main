@@ -1,0 +1,216 @@
+=== TC-10: Verify that a suspended driver can be neither deactivated nor suspended again (BUG-API-021)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:623
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Driver profile processing windows finalized successfully across all database channels.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821378567.mBPJ05cKjmQeC",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/statusUpdate
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": 1,
+  "metadata": null,
+  "status": 200,
+  "action": "update_bulk_status_drivers",
+  "signature": "1794821378958.7jCnBlSAo9ZwW",
+  "type": "drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Driver profile processing windows finalized successfully across all database channels.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821379287.k2y7QHpf1LwPr",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver/update
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Targeted block status released and synchronized successfully.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821379634.3oKBRLmKPnZmY",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver/update
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Targeted block status released and synchronized successfully.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821380122.N6hWFAgbVY6Ae",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/statusUpdate
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": 1,
+  "metadata": null,
+  "status": 200,
+  "action": "update_bulk_status_drivers",
+  "signature": "1794821380444.LSZK9Rhnouoj5",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toEqual(expected) // deep equality
+- Expected  - 2
++ Received  + 2
+
+
+=== TC-11: Verify that an inactive driver cannot be suspended (BUG-API-021)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:699
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/inactive_drivers/v2/save_inactive_driver?driver_id=38308
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "company_id": "541",
+    "inactive_date": "2026-11-16T00:00:00.000Z",
+    "driver_id": "38308",
+    "driver_name": "Riley Thompson",
+    "reason_type": "business_decision",
+    "reasons": [
+      "Volume Reduction"
+    ],
+    "note": "Route volume at DYY1 dropped for the season.",
+    "urls": [],
+    "_id": "6afacd06a3b96f13e8c9a4a1",
+    "created_at": "2026-11-16T09:29:42.246Z",
+    "updated_at": "2026-11-16T09:29:42.246Z",
+    "__v": 0
+  },
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821382234.6Sg204Ql6wirG",
+  "type": "inactive_drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/statusUpdate
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": 1,
+  "metadata": null,
+  "status": 200,
+  "action": "update_bulk_status_drivers",
+  "signature": "1794821382582.ieWbfgTNThdUo",
+  "type": "drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Driver profile processing windows finalized successfully across all database channels.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821382908.DI0wD84tNzbbI",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver/update
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Targeted block status released and synchronized successfully.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821383280.3WvHTp9aUly2N",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/statusUpdate
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": 1,
+  "metadata": null,
+  "status": 200,
+  "action": "update_bulk_status_drivers",
+  "signature": "1794821383614.XSlY5ilcQtTE9",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200

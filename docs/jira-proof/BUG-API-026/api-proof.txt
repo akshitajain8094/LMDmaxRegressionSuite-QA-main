@@ -1,0 +1,92 @@
+=== TC-21: Verify that the password with a space before or after it is refused (TC_LOGIN_036) (BUG-API-026)
+tests/api/login/login.spec.js:376
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/users/v1/user/perf_login
+Status: 200
+
+Answer:
+{
+  "signature": "1794821381740.XsYFlW302UdD7",
+  "action": "login",
+  "status": 200,
+  "success": true,
+  "message": "",
+  "data": {
+    "email": "*** hidden ***",
+    "role": "owner",
+    "api_role_key": "owner",
+    "name": "Chat Account0",
+    "account_id": "99713304",
+    "phone": "*** hidden ***",
+    "is_phone_verified": false,
+    "dob": null,
+    "is_visible": false,
+    "is_visible_fleet": false,
+    "is_visible_perf": false,
+    "user_policy_version": "102",
+    "scheduler_permissions": {
+      "is_pinned": false,
+      "average_rating": true,
+      "view_pref": "employee"
+    },
+    "accessible_company_ids": [
+      "541",
+      "295",
+      "701"
+    ],
+    "primary_company_id": "295",
+    "company_ownership_id": "281",
+    "company": {
+      "company_id": "541",
+      "dsp_short_code": "Paya",
+      "company_name": "PAPAYA LMD",
+      "company_type": "lmd",
+      "company_logo": "https://d2jilumhwuwrmw.cloudfront.net/incident-report/staging/295/1763988930323company_logo.jpeg",
+      "inspection": {},
+      "address": "*** hidden ***",
+      "owner_name": "Chat User",
+      "station_code": "DYY1",
+      "zipcode": "23232",
+      "v_inspection": {},
+      "allow_driver_signin": false,
+      "allow_driver_inspections": false,
+      "allow_bulk_message": true,
+      "custom_inspection_text": null,
+      "message_params": null,
+      "other_driver_message_params": null,
+      "password": "*** hidden ***",
+      "password_type": "defined",
+      "inapp_chat_enabled": true,
+      "inapp_individual_chat_enabled": true,
+      "message_routing": "twilio",
+      "company_uuid": null,
+      "auto_coaching_enable": true,
+      "performance_twilio_number": "+19089751721",
+      "secondary_twilio_number": "+15005550002",
+      "netradyne_customer_name": "PAYA",
+      "forward_call_number": "+14335654466",
+      "forward_call_enable": true,
+      "autocoaching_enable_time": "2025-10-30T00:00:00.000Z",
+      "payroll_twilio_number": null,
+      "inspection_criteria": null,
+      "driver_rating": true,
+      "allow_pmrs_only_access": false,
+      "fetch_schedular_roster_drivers": false,
+      "allow_fleet_login": true,
+      "performance_dashboard_version": "new",
+      "show_new_dashboard": "hide_dashboard_popup"
+    },
+    "permission_json": {},
+    "token": "*** hidden ***",
+    "device_id": "di_1794821382123.Lwf4QwB",
+    "device_session": "*** hidden ***",
+    "user_id": "6873"
+  },
+  "id": "99713304"
+}
+
+FAILED CHECK:
+Error: space after
+expect(received).toBe(expected) // Object.is equality
+Expected: 401
+Received: 200

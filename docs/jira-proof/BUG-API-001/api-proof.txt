@@ -1,0 +1,1111 @@
+=== TC-08: Verify that the call-out list without a date is rejected (BUG-API-001)
+tests/api/call-outs/call-out.spec.js:240
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/call_out/v2/call_out
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "CallOut data fetched successfully",
+  "data": [
+    {
+      "_id": "6afaccf0a3b96f13e8c9a316",
+      "company_id": "541",
+      "date": "2026-11-10T00:00:00.000Z",
+      "driver_id": 38267,
+      "msg_sent": false,
+      "msg_id": null,
+      "created_by": "99713304",
+      "created_from_app_type": "2",
+      "created_at": "2026-11-16T09:29:20.904Z",
+      "updated_at": "2026-11-16T09:29:20.904Z",
+      "metrics": {
+        "name": "Jordan Whitaker",
+        "callout_time": "Sick",
+        "status": "callout",
+        "excused": "No",
+        "reason": "Called at 5:40 AM: fever since last night.",
+        "is_type_deleted": false
+      }
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821360999.wsGzk2RIddoL6",
+  "type": "success",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-09: Verify that a wrong date format (DD-MM-YYYY) is rejected (BUG-API-001)
+tests/api/call-outs/call-out.spec.js:259
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/call_out/v2/call_out?date=25-08-2026
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "CallOut data fetched successfully",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821361015.Xy6Rh46Av61qY",
+  "type": "success",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-21: Verify that editing a call-out that does not exist returns 404 (BUG-API-001)
+tests/api/call-outs/call-out.spec.js:573
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/call_out/v2/call_out
+Status: 403
+
+Answer:
+{
+  "success": false,
+  "message": "Report not accessible",
+  "data": null,
+  "metadata": null,
+  "status": 403,
+  "action": null,
+  "signature": "1794821361085.E4Qkg4irDub3a",
+  "type": "error",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 404
+Received: 403
+
+
+=== TC-17: Verify that missing type is rejected (BUG-API-001)
+tests/api/dashboard/daily-insights.spec.js:378
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/daily_insights?start=2025-09-01&end=2026-08-31
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": "daily_insights",
+  "signature": "1794821362761.8CASVouOD0mHG",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-18: Verify that unknown type is rejected (BUG-API-001)
+tests/api/dashboard/daily-insights.spec.js:399
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/daily_insights?start=2025-09-01&end=2026-08-31&type=xyz
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": "daily_insights",
+  "signature": "1794821362819.n1Oj66MW8UoqR",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-19: Verify that type=drivers without report_name is rejected (BUG-API-001)
+tests/api/dashboard/daily-insights.spec.js:420
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/daily_insights?start=2025-09-01&end=2026-08-31&type=drivers
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": "daily_insights",
+  "signature": "1794821362820.tDRaj4b5z2GUR",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-20: Verify that unknown report_name is rejected (BUG-API-001)
+tests/api/dashboard/daily-insights.spec.js:441
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/daily_insights?start=2025-09-01&end=2026-08-31&type=drivers&report_name=xyz
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": "daily_insights",
+  "signature": "1794821362844.Qomb8rbNXGjZ9",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-15: Verify that missing start and end are rejected (BUG-API-001)
+tests/api/dashboard/dashboard-data.spec.js:348
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/dashboard_data
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "safety": {
+      "Sign/Signal Violations": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Sign/Signal Violations",
+        "baseColor": "#1656D2",
+        "drivers": []
+      },
+      "Driver Distraction": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Driver Distraction",
+        "baseColor": "#4F8DFF",
+        "drivers": []
+      },
+      "Following Distance": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Following Distance",
+        "baseColor": "#76A5FF",
+        "drivers": []
+      },
+      "Speeding Violations": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Speeding Violations",
+        "baseColor": "#81A4CC",
+        "drivers": []
+      },
+      "Seatbelt Compliance": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Seatbelt Compliance",
+        "baseColor": "#81A4CC",
+        "drivers": []
+      },
+      "Acceleration": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Acceleration",
+        "baseColor": "#997500",
+        "drivers": []
+      },
+      "Braking": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Braking",
+        "baseColor": "#CC9C00",
+        "drivers": []
+      },
+      "Cornering": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Cornering",
+        "baseColor": "#FFC300",
+        "drivers": []
+      },
+      "Speeding": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Speeding",
+        "baseColor": "#FFDA63",
+        "drivers": []
+      },
+      "Distraction": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Distraction",
+        "baseColor": "#FBE7A5",
+        "drivers": []
+      },
+      "Seatbelt": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Seatbelt",
+        "baseColor": "#FFF0BF",
+        "drivers": []
+      },
+      "Total": {
+        "total": 0,
+        "change": 0,
+        "color": "Gray",
+        "label": "Total"
+      },
+      "drivers": []
+    },
+    "quality": {
+      "DSB DNR": {
+        "total": 0,
+        "drivers_with_more_than_1_dsb_dnr": 0
+      },
+      "packages_delivered": {
+        "total": 0,
+        "change": 0,
+        "color": "gray"
+      },
+      "dcr": {
+        "total": 0,
+        "change": 0,
+        "color": "gray"
+      },
+      "pod": {
+        "total": 0,
+        "change": 0,
+        "color": "gray"
+      },
+      "customer_negative_feedback": {
+        "total": 0,
+        "change": 0,
+        "color": "gray",
+        "feedback_counts": {
+          "Driver Mishandled Package": 0,
+          "Driver Was Unprofessional": 0,
+          "Driver Did Not Follow My Delivery Instructions": 0,
+          "Delivered To Wrong Address": 0,
+          "Never Received Delivery": 0,
+          "Received Wrong Item": 0
+        },
+        "top_drivers": []
+      }
+    },
+    "team": {
+      "writeup": {
+        "total": 4,
+        "unsigned": 0
+      },
+      "working_devices": {
+        "total": 0,
+        "expected": 0
+      },
+      "callouts": {
+        "total": 0,
+        "excused": 0,
+        "unexcused": 0,
+        "change": "0.00"
+      },
+      "rescue": {
+        "completed": 0,
+        "refused": 0
+      },
+      "acknowledgement": {
+        "total": 1,
+        "unsigned": 0
+      }
+    }
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_dashboard_data",
+  "signature": "1794821363136.JTEmlbPpLjwqc",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-12: Verify that missing type is rejected (BUG-API-001)
+tests/api/dashboard/weekly-insights.spec.js:257
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=202634&end=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": "weekly_insights",
+  "signature": "1794821365410.82QVlaq6p42nP",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-13: Verify that unknown type is rejected (BUG-API-001)
+tests/api/dashboard/weekly-insights.spec.js:278
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=202634&end=202634&type=xyz
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": "weekly_insights",
+  "signature": "1794821365465.k1B5RDbL1ANBD",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-14: Verify that missing field returns "params missing" (BUG-API-001)
+tests/api/graph-data/driver-compare-scorecard-graph.spec.js:378
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_compare_scorecard_graph?transporter_id=A39FCSHRDP87JW&range=6&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202629": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202630": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202631": {
+      "current": "No Data",
+      "trailing": -0.01
+    },
+    "202632": {
+      "current": "No Data",
+      "trailing": -0.01
+    },
+    "202633": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202634": {
+      "current": "No Data",
+      "trailing": -0.01
+    },
+    "field": "fico_score"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821372253.fxCNKAPAnPntf",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-15: Verify that an unknown field (xyz) is rejected (BUG-API-001)
+tests/api/graph-data/driver-compare-scorecard-graph.spec.js:404
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_compare_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=xyz&range=6&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202629": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202630": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202631": {
+      "trailing": -0.01
+    },
+    "202632": {
+      "trailing": -0.01
+    },
+    "202633": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202634": {
+      "trailing": -0.01
+    },
+    "field": "xyz"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821373100.mioYeqPycCGP5",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-16: Verify that range=0 is rejected (BUG-API-001)
+tests/api/graph-data/driver-compare-scorecard-graph.spec.js:430
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_compare_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=0&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "field": "delivered"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821373591.JXE9IXgTdX8Wp",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-17: Verify that text as range (abc) is rejected (BUG-API-001)
+tests/api/graph-data/driver-compare-scorecard-graph.spec.js:456
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_compare_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=abc&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "field": "delivered"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821373668.kXQTeUNcOOlKd",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-19: Verify that an impossible week (week 99) is rejected (BUG-API-001)
+tests/api/graph-data/driver-compare-scorecard-graph.spec.js:508
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_compare_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=6&week_number=202699
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202694": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202695": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202696": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202697": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202698": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "202699": {
+      "current": -0.01,
+      "trailing": -0.01
+    },
+    "field": "delivered"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821373951.kBtMY09CSJZ0v",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-14: Verify that an unknown field (xyz) is rejected (BUG-API-001)
+tests/api/graph-data/driver-current-scorecard-graph.spec.js:374
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_current_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=xyz&range=6&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202629": -0.01,
+    "202630": -0.01,
+    "202631": -0.01,
+    "202632": -0.01,
+    "202633": -0.01,
+    "202634": -0.01
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821374157.62EK50tcv8ztM",
+  "field": "xyz",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-15: Verify that range=0 is rejected (BUG-API-001)
+tests/api/graph-data/driver-current-scorecard-graph.spec.js:400
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_current_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=0&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {},
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821374272.AgRirgLuKmN3G",
+  "field": "delivered",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-16: Verify that text as range (abc) is rejected (BUG-API-001)
+tests/api/graph-data/driver-current-scorecard-graph.spec.js:426
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_current_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=abc&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {},
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821374754.rRoE84sGvEt9H",
+  "field": "delivered",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-18: Verify that an impossible week (week 99) is rejected (BUG-API-001)
+tests/api/graph-data/driver-current-scorecard-graph.spec.js:478
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/driver_current_scorecard_graph?transporter_id=A39FCSHRDP87JW&field=delivered&range=6&week_number=202699
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202694": -0.01,
+    "202695": -0.01,
+    "202696": -0.01,
+    "202697": -0.01,
+    "202698": -0.01,
+    "202699": -0.01
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821375523.kkfQLz1vVxxzD",
+  "field": "delivered",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-15: Verify that an unknown field (xyz) is rejected (BUG-API-001)
+tests/api/graph-data/dsp-scorecard-graph.spec.js:376
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/dsp_scorecard_graph?field=xyz&range=6&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202629": -0.01,
+    "202630": -0.01,
+    "202631": -0.01,
+    "202632": -0.01,
+    "202633": -0.01,
+    "202634": -0.01
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821375912.FRsO2cUcaC6SR",
+  "field": "xyz",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-16: Verify that Swagger example field "score" is rejected (BUG-API-001)
+tests/api/graph-data/dsp-scorecard-graph.spec.js:397
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/dsp_scorecard_graph?field=score&range=6&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202629": -0.01,
+    "202630": -0.01,
+    "202631": -0.01,
+    "202632": -0.01,
+    "202633": -0.01,
+    "202634": -0.01
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821375969.GrQLo7vaQfqjT",
+  "field": "score",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-17: Verify that range=0 is rejected (BUG-API-001)
+tests/api/graph-data/dsp-scorecard-graph.spec.js:418
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/dsp_scorecard_graph?field=safety_and_compliance&range=0&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {},
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821376155.656wblsM51XrG",
+  "field": "safety_and_compliance",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-18: Verify that text as range (abc) is rejected (BUG-API-001)
+tests/api/graph-data/dsp-scorecard-graph.spec.js:443
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/dsp_scorecard_graph?field=safety_and_compliance&range=abc&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {},
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821376179.CWdbKot4XSxOp",
+  "field": "safety_and_compliance",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-20: Verify that an impossible week (week 99) is rejected (BUG-API-001)
+tests/api/graph-data/dsp-scorecard-graph.spec.js:493
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/dsp_scorecard_graph?field=safety_and_compliance&range=6&week_number=202699
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202694": -0.01,
+    "202695": -0.01,
+    "202696": -0.01,
+    "202697": -0.01,
+    "202698": -0.01,
+    "202699": -0.01
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_report",
+  "signature": "1794821377325.t3fCUyfJAfOCW",
+  "field": "safety_and_compliance",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-05: Verify that the rescue list without a date is rejected (BUG-API-001)
+tests/api/rescues/rescue.spec.js:156
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [
+    {
+      "metrics": {
+        "caller_name": "adasd",
+        "rescuer_name": "Abdullah Heath",
+        "status": "Completed",
+        "number_of_packages": null,
+        "number_of_stops": null,
+        "reason": ""
+      },
+      "_id": "6ace1c7d5ab68b65d45c78c6",
+      "company_id": "541",
+      "date": "2026-10-13T00:00:00.000Z",
+      "caller_id": 36622,
+      "rescuer_id": 33007,
+      "msg_sent": false,
+      "msg_id": null,
+      "created_at": "2026-10-13T11:56:45.718Z",
+      "updated_at": "2026-10-13T11:56:45.718Z",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821381225.WpDPxnRKV0lHj",
+  "type": "success",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-19: Verify that editing a rescue that does not exist returns 404 (BUG-API-001)
+tests/api/rescues/rescue.spec.js:535
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue
+Status: 403
+
+Answer:
+{
+  "success": false,
+  "message": "Report not accessible",
+  "data": null,
+  "metadata": null,
+  "status": 403,
+  "action": null,
+  "signature": "1794821384306.3ve5FTPyqmr1m",
+  "type": "error",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 404
+Received: 403
+
+
+=== TC-06: Verify that the scorecard of a week that does not exist (week 99) is rejected (BUG-API-001)
+tests/api/scorecard/driver-scorecard.spec.js:181
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/scorecard/v2/compare?transporter_id=A3D7TKWA5X4ZCT&week_number=202699
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "current": [],
+    "trailing": []
+  },
+  "metadata": null,
+  "status": 200,
+  "week_number": "202699",
+  "action": "get_report",
+  "signature": "1794821384678.tYnL8cVahZfuk",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-11: Verify that the rating without a week is rejected (BUG-API-001)
+tests/api/scorecard/driver-scorecard.spec.js:286
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/driver_rating/v2/get_driver_rating?driver_id=36363
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "rating": null
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "dirver_rating",
+  "signature": "1794821384842.Gf8E7gxPs9pRG",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-12: Verify that the rating without a driver is rejected (BUG-API-001)
+tests/api/scorecard/driver-scorecard.spec.js:306
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/driver_rating/v2/get_driver_rating?week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "rating": null
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "dirver_rating",
+  "signature": "1794821384989.yv2tAmGaJdvNo",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-18: Verify that all week's ratings for 0 or "abc" weeks are rejected (BUG-API-001)
+tests/api/scorecard/driver-scorecard.spec.js:451
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/driver_rating/v2/get_rating_graph_data?driver_id=36363&range=0&week_number=202634
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {},
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": null,
+  "type": "get_rating_graph_data",
+  "id": null
+}
+
+FAILED CHECK:
+Error: range 0
+expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-19: Verify that all week's ratings up to a week that does not exist (week 99) are rejected (BUG-API-001)
+tests/api/scorecard/driver-scorecard.spec.js:473
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/driver_rating/v2/get_rating_graph_data?driver_id=36363&range=6&week_number=202699
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": {
+    "202694": -0.01,
+    "202695": -0.01,
+    "202696": -0.01,
+    "202697": -0.01,
+    "202698": -0.01,
+    "202699": -0.01
+  },
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": null,
+  "type": "get_rating_graph_data",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200

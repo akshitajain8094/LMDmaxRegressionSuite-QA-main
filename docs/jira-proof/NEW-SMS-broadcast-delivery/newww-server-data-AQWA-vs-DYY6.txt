@@ -1,0 +1,20 @@
+
+== selector 578: broadcast 6afd4a43a3b96f13e8ccd722, associated_stations undefined
+  msg "nnnn" attachments 0 company 578 total 3 to ["33256","37766","37762"] delivered ["33256","37766","37762"] error null created 2026-11-18T06:49:06.905Z
+     1:1 33256: "nnnn" attachments 0 status delivered twilio_error null
+     1:1 37766: "nnnn" attachments 0 status delivered twilio_error null
+     1:1 37762: "nnnn" attachments 0 status delivered twilio_error null
+  msg "hiiii" attachments 1 company 578 total 3 to ["33256","37766","37762"] delivered ["33256","37766","37762"] error null created 2026-11-18T06:48:36.350Z
+     1:1 33256: "hiiii" attachments 1 status sent twilio_error null
+     1:1 37766: "hiiii" attachments 1 status sent twilio_error null
+     1:1 37762: "hiiii" attachments 1 status sent twilio_error null
+
+== selector 477: broadcast 6afd4a43a3b96f13e8ccd722, associated_stations undefined
+  msg "nnnn" attachments 0 company 578 total 3 to ["33256","37766","37762"] delivered [] error null created 2026-11-18T06:49:06.905Z
+     1:1 33256: "nnnn" attachments 0 status delivered twilio_error null
+     1:1 37766: "nnnn" attachments 0 status delivered twilio_error null
+     1:1 37762: "nnnn" attachments 0 status delivered twilio_error null
+  msg "hiiii" attachments 1 company 578 total 3 to ["33256","37766","37762"] delivered [] error null created 2026-11-18T06:48:36.350Z
+     1:1 33256: "hiiii" attachments 1 status sent twilio_error null
+     1:1 37766: "hiiii" attachments 1 status sent twilio_error null
+     1:1 37762: "hiiii" attachments 1 status sent twilio_error null

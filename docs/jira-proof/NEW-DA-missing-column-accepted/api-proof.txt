@@ -1,0 +1,44 @@
+Issue 2: DA Weekly CSV without the "Transporter ID" column is accepted and replaces the week   (staging, AQWA 578, 2026-11-17T10:03:35.206Z)
+File: DSP_Overview_Dashboard_PAYA_DYY6_2026-W42.csv = the week-42 export with the "Transporter ID" column deleted (53 columns, 140 rows)
+
+==== 1. Before: week 42 DA Weekly Overview
+> GET https://staging-api.fleet.lmdmax.com/lmd/prfsrv/da_weekly_overview/v2/da_weekly_overview_report?week_number=202642
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+< HTTP/1.1 200
+data: 140 rows, with transporter_id: 140, without: 0   first row → {"transporter_id":"A1053T343RAV73","name":"Nghia Trong Lam","updated_at":"2026-11-17T09:51:28.216Z"}
+
+==== 2. Upload the broken CSV (Workflow → Weekly → DA Weekly Overview, week 42, "update it?" → Yes)
+> POST https://staging-api.fleet.lmdmax.com/lmd/prfsrv/extract/v3/weekly
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+> form file = file "DSP_Overview_Dashboard_PAYA_DYY6_2026-W42.csv" (34616 bytes)
+> form week_number = 202642
+> form report_name = da_weekly_overview_report
+> form replace = true
+< HTTP/1.1 200
+success: true, message: "ok", data: 140 rows; first row has transporter_id: null, name: John Uruena Lopez
+
+==== 3. After: week 42 DA Weekly Overview (expected: unchanged, because the upload should have been refused)
+> GET https://staging-api.fleet.lmdmax.com/lmd/prfsrv/da_weekly_overview/v2/da_weekly_overview_report?week_number=202642
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+< HTTP/1.1 200
+data: 140 rows, with transporter_id: 0, without: 140   first row → {"transporter_id":null,"name":"John Uruena Lopez","updated_at":"2026-11-17T10:03:35.916Z"}
+
+==== 4. Driver lookup after the broken upload (Chad Elnahal)
+> GET https://staging-api.fleet.lmdmax.com/lmd/prfsrv/da_weekly_overview/v2/da_weekly_overview_report?week_number=202642&transporter_id=A3D7TKWA5X4ZCT
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+< HTTP/1.1 200
+data: 0 row(s) → []
+
+==== 5. Clean-up: the original export uploaded again
+> POST https://staging-api.fleet.lmdmax.com/lmd/prfsrv/extract/v3/weekly
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+> form file = file "DSP_Overview_Dashboard_PAYA_DYY6_2026-W42.csv" (36557 bytes)
+> form week_number = 202642
+> form report_name = da_weekly_overview_report
+> form replace = true
+< HTTP/1.1 200
+success: true, data: 140 rows
+> GET https://staging-api.fleet.lmdmax.com/lmd/prfsrv/da_weekly_overview/v2/da_weekly_overview_report?week_number=202642
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+< HTTP/1.1 200
+data: 140 rows, with transporter_id: 140, without: 0   first row → {"transporter_id":"A1053T343RAV73","name":"Nghia Trong Lam","updated_at":"2026-11-17T10:03:37.366Z"}

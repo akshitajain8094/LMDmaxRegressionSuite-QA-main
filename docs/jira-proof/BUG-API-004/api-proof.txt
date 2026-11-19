@@ -1,0 +1,48 @@
+=== TC-17: Verify that a week without data does not return a server crash message (BUG-API-004)
+tests/api/dashboard/weekly-insights.spec.js:362
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=202601&end=202601&type=dsp
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cannot read properties of undefined (reading 'metrics')",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "weekly_insights",
+  "signature": "1794821365712.p3BxXXQo1smEI",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cannot read properties"
+Received string:        "Cannot read properties of undefined (reading 'metrics')"
+
+
+=== TC-18: Verify that a future week does not return a server crash message (BUG-API-004)
+tests/api/dashboard/weekly-insights.spec.js:382
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=203001&end=203001&type=dsp
+Status: 400
+
+Answer:
+{
+  "success": false,
+  "message": "Cannot read properties of undefined (reading 'metrics')",
+  "data": null,
+  "metadata": null,
+  "status": 400,
+  "action": "weekly_insights",
+  "signature": "1794821365873.utGfkrw4aZN2M",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toContain(expected) // indexOf
+Expected substring: not "Cannot read properties"
+Received string:        "Cannot read properties of undefined (reading 'metrics')"

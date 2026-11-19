@@ -1,0 +1,79 @@
+=== TC-13: Verify that the first label is spelled "Total Delivered Packages" (BUG-API-014)
+tests/api/graph-data/quality-dashboard.spec.js:282
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/quality_dashboard?start=2025-09-01&end=2026-08-31
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "label": "Total Delievered Packages",
+        "value": 0,
+        "color": "#343C52"
+      },
+      {
+        "label": "Total Routes Completed",
+        "value": 0,
+        "color": "#343C52"
+      },
+      {
+        "label": "Total DNR",
+        "value": 0,
+        "color": "#343C52"
+      },
+      {
+        "label": "Avg. DCR",
+        "color": "#67CFAA",
+        "value": 0
+      },
+      {
+        "label": "Avg. SWC-POD",
+        "color": "#EB6932",
+        "value": 0
+      }
+    ],
+    "start": "2025-09-01",
+    "end": "2026-08-31"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_daily_dashboard",
+  "signature": "1794821379890.8XRtf0me33ER0",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: "Total Delivered Packages"
+Received: "Total Delievered Packages"
+
+
+=== TC-09: Verify that the wrong-OTP message is written correctly (BUG-API-014)
+tests/api/login/forgot-password.spec.js:139
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/users/v1/user/credentials/verify
+Status: 401
+
+Answer:
+{
+  "success": false,
+  "message": "Invalid  OTP",
+  "data": null,
+  "metadata": null,
+  "status": 401,
+  "action": "reset_password",
+  "signature": "1794821380730.J6dhqRDllGrFA",
+  "type": "users",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: "Invalid OTP"
+Received: "Invalid  OTP"

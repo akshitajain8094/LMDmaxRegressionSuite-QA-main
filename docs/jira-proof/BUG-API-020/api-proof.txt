@@ -1,0 +1,124 @@
+=== TC-05: Verify that the web app's Edit refuses another driver's phone number (BUG-API-020)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:441
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 201
+
+Answer:
+{
+  "success": true,
+  "message": "updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 201,
+  "action": "update_driver",
+  "signature": "1794821367874.xvlrh1tbpSqWX",
+  "type": "drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 201
+
+Answer:
+{
+  "success": true,
+  "message": "updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 201,
+  "action": "update_driver",
+  "signature": "1794821368233.XGaXTJ96v6UWu",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 409
+Received: 201
+
+
+=== TC-06: Verify that the web app's Edit refuses another driver's transporter ID (BUG-API-020)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:481
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 201
+
+Answer:
+{
+  "success": true,
+  "message": "updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 201,
+  "action": "update_driver",
+  "signature": "1794821370466.FVmbJmBqigXad",
+  "type": "drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 201
+
+Answer:
+{
+  "success": true,
+  "message": "updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 201,
+  "action": "update_driver",
+  "signature": "1794821370847.kSraQ2sJt6jnE",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 409
+Received: 201
+
+
+=== TC-07: Verify that the web app's Edit answers another driver's email with a conflict, not a server error (BUG-API-020)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:519
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 500
+
+Answer:
+{
+  "success": false,
+  "message": "something went wrong",
+  "data": null,
+  "metadata": null,
+  "status": 500,
+  "action": "update_driver",
+  "signature": "1794821372471.Depbx2YY5CFqv",
+  "type": "drivers",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/drivers/v1/driver/38308
+Status: 201
+
+Answer:
+{
+  "success": true,
+  "message": "updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 201,
+  "action": "update_driver",
+  "signature": "1794821372829.paD1h5qZH5R7L",
+  "type": "drivers",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 409
+Received: 500

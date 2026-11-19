@@ -1,0 +1,329 @@
+=== TC-06: Verify that editing a write-up changes its "updated_at" time (BUG-API-017)
+tests/api/e-signature/write-up-journeys.spec.js:557
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/e-signature/v2/create
+Status: 200
+
+Answer:
+{
+  "failed_records": [],
+  "success": true,
+  "message": "Success",
+  "data": [
+    {
+      "company_id": "541",
+      "driver_id": "38267",
+      "driver_name": "Jordan Whitaker",
+      "created_by_name": "Chat Account0",
+      "created_by": "99713304",
+      "title": "Parking ticket on route DYY1-17",
+      "message": "Hi Jordan Whitaker\n\nPlease e-sign the Parking ticket on route DYY1-17.\n\nLink :- ${link}\n\nRegards,\nPAPAYA LMD",
+      "report_url": null,
+      "report_date": "2026-11-16T00:00:00.000Z",
+      "report_type": "write-up",
+      "status": "sent",
+      "refused_by": "",
+      "refused_reason": "",
+      "attachments": [],
+      "violation": [
+        "Parking Tickets"
+      ],
+      "notes": "<p>The driver received a parking ticket on route DYY1-17.</p>",
+      "reminder_dates": [],
+      "sent_at": "2026-11-16T09:29:30.427Z",
+      "sent_from": "message",
+      "channels": [
+        "sms"
+      ],
+      "driver_sign_url": null,
+      "company_logo_url": null,
+      "company_sign_url": "https://d2jilumhwuwrmw.cloudfront.net/e-signature/staging/541/company_sign.jpeg",
+      "driver_sign_date": null,
+      "group_id": null,
+      "is_deleted": false,
+      "deleted_at": null,
+      "deleted_by": null,
+      "_id": "6afaccfaa3b96f13e8c9a3c3",
+      "created_at": "2026-11-16T09:29:30.427Z",
+      "updated_at": "2026-11-16T09:29:30.427Z",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "e-signature-controller",
+  "signature": "1794821370414.TbgPXuoHjFT8V",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/e-signature/v2/update/6afaccfaa3b96f13e8c9a3c3
+Status: 200
+
+Answer:
+{
+  "failed_records": [],
+  "success": true,
+  "message": "Success",
+  "failures": [],
+  "data": {
+    "_id": "6afaccfaa3b96f13e8c9a3c3",
+    "company_id": "541",
+    "driver_id": "38267",
+    "driver_name": "Jordan Whitaker",
+    "created_by_name": "Chat Account0",
+    "created_by": "99713304",
+    "title": "Parking ticket on route DYY1-17",
+    "message": "Hi Jordan Whitaker\n\nPlease e-sign the Parking ticket on route DYY1-17.\n\nLink :- ${link}\n\nRegards,\nPAPAYA LMD",
+    "report_url": null,
+    "report_date": "2026-11-16T00:00:00.000Z",
+    "report_type": "write-up",
+    "status": "sent",
+    "refused_by": "",
+    "refused_reason": "",
+    "attachments": [],
+    "violation": [
+      "Parking Tickets"
+    ],
+    "notes": "<p>The driver received a parking ticket on route DYY1-17. The ticket was paid by the company.</p>",
+    "reminder_dates": [],
+    "sent_at": "2026-11-16T09:29:30.427Z",
+    "sent_from": "message",
+    "channels": [
+      "sms"
+    ],
+    "driver_sign_url": null,
+    "company_logo_url": null,
+    "company_sign_url": "https://d2jilumhwuwrmw.cloudfront.net/e-signature/staging/541/company_sign.jpeg",
+    "driver_sign_date": null,
+    "group_id": null,
+    "is_deleted": false,
+    "deleted_at": null,
+    "deleted_by": null,
+    "created_at": "2026-11-16T09:29:30.427Z",
+    "updated_at": "2026-11-16T09:29:30.427Z",
+    "__v": 0,
+    "link": "https://staging.performance.lmdmax.com/e-signature/write-up/PDM38267U6G/6afaccfaa3b96f13e8c9a3c3",
+    "msg_id": "6afaccfaa3b96f13e8c9a3c8"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "e-signature-controller",
+  "signature": "1794821371134.WQ3BjDMWSNImN",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/e-signature/v1/6afaccfaa3b96f13e8c9a3c3
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Success",
+  "data": {
+    "_id": "6afaccfaa3b96f13e8c9a3c3",
+    "company_id": "541",
+    "driver_id": "38267",
+    "driver_name": "Jordan Whitaker",
+    "created_by_name": "Chat Account0",
+    "created_by": "99713304",
+    "title": "Parking ticket on route DYY1-17",
+    "message": "Hi Jordan Whitaker\n\nPlease e-sign the Parking ticket on route DYY1-17.\n\nLink :- ${link}\n\nRegards,\nPAPAYA LMD",
+    "report_url": null,
+    "report_date": "2026-11-16T00:00:00.000Z",
+    "report_type": "write-up",
+    "status": "sent",
+    "refused_by": "",
+    "refused_reason": "",
+    "attachments": [],
+    "violation": [
+      "Parking Tickets"
+    ],
+    "notes": "<p>The driver received a parking ticket on route DYY1-17. The ticket was paid by the company.</p>",
+    "reminder_dates": [],
+    "sent_at": "2026-11-16T09:29:30.427Z",
+    "sent_from": "message",
+    "channels": [
+      "sms"
+    ],
+    "driver_sign_url": null,
+    "company_logo_url": null,
+    "company_sign_url": "https://d2jilumhwuwrmw.cloudfront.net/e-signature/staging/541/company_sign.jpeg",
+    "driver_sign_date": null,
+    "group_id": null,
+    "is_deleted": false,
+    "deleted_at": null,
+    "deleted_by": null,
+    "created_at": "2026-11-16T09:29:30.427Z",
+    "updated_at": "2026-11-16T09:29:30.427Z",
+    "__v": 0,
+    "link": "https://staging.performance.lmdmax.com/e-signature/write-up/hec38267IxC/6afaccfaa3b96f13e8c9a3c3",
+    "msg_id": "6afaccfba3b96f13e8c9a3f4"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "e-signature-controller",
+  "signature": "1794821372180.TFqWff19tiWxE",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/e-signature/v1/6afaccfaa3b96f13e8c9a3c3
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Report deleted successfully.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "e-signature-controller",
+  "signature": "1794821372493.pR3ERkBK7hYtF",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toBe(expected) // Object.is equality
+Expected: not "2026-11-16T09:29:30.427Z"
+
+
+=== TC-06: Verify that editing a rescue changes its "updated_at" time (BUG-API-017)
+tests/api/rescues/rescue-journeys.spec.js:465
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Rescue data saved successfully",
+  "data": [
+    {
+      "company_id": "541",
+      "date": "2026-11-10T00:00:00.000Z",
+      "caller_id": 38267,
+      "rescuer_id": 38315,
+      "metrics": {
+        "caller_name": "Jordan Whitaker",
+        "rescuer_name": "Casey Brooks",
+        "status": "Completed",
+        "number_of_packages": 20,
+        "number_of_stops": 8,
+        "reason": "Late start on route DYY1-05."
+      },
+      "msg_sent": false,
+      "msg_id": null,
+      "_id": "6afacd05a3b96f13e8c9a496",
+      "created_at": "2026-11-16T09:29:41.941Z",
+      "updated_at": "2026-11-16T09:29:41.941Z",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821381933.mgofjLmOMd4PE",
+  "type": "success",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Rescue data updated successfully",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821382248.Sun4zFoeqGQC4",
+  "type": "success",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue?date=2026-11-10
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [
+    {
+      "metrics": {
+        "caller_name": "Jordan Whitaker",
+        "rescuer_name": "Casey Brooks",
+        "status": "Completed",
+        "number_of_packages": 20,
+        "number_of_stops": 10,
+        "reason": "Late start on route DYY1-05."
+      },
+      "_id": "6afacd05a3b96f13e8c9a496",
+      "company_id": "541",
+      "date": "2026-11-10T00:00:00.000Z",
+      "caller_id": 38267,
+      "rescuer_id": 38315,
+      "msg_sent": false,
+      "msg_id": null,
+      "created_at": "2026-11-16T09:29:41.941Z",
+      "updated_at": "2026-11-16T09:29:41.941Z",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821382732.fteJByTwNZi5n",
+  "type": "success",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue?_id=6afacd05a3b96f13e8c9a496&rescuer_id=38315&caller_id=38267&date=2026-11-10T00%3A00%3A00.000Z
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Rescue data deleted successfully",
+  "data": {
+    "metrics": {
+      "caller_name": "Jordan Whitaker",
+      "rescuer_name": "Casey Brooks",
+      "status": "Completed",
+      "number_of_packages": 20,
+      "number_of_stops": 10,
+      "reason": "Late start on route DYY1-05."
+    },
+    "_id": "6afacd05a3b96f13e8c9a496",
+    "company_id": "541",
+    "date": "2026-11-10T00:00:00.000Z",
+    "caller_id": 38267,
+    "rescuer_id": 38315,
+    "msg_sent": false,
+    "msg_id": null,
+    "created_at": "2026-11-16T09:29:41.941Z",
+    "updated_at": "2026-11-16T09:29:41.941Z",
+    "__v": 0
+  },
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821383038.RxXQIijWG0mH1",
+  "type": "success",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toBe(expected) // Object.is equality
+Expected: not "2026-11-16T09:29:41.941Z"

@@ -1,0 +1,17 @@
+receivers: Chad Elnahal 33256 stations 477; janeil 37766 stations 578/477; jjiaa 37762 stations 578; Allister Allman 40136 stations 578
+create_broadcast with msg 1 (AQWA selected): 204 
+broadcast "QA station check 09:41" id 6afd72e1c76b61ba57a83d4d
+sent msg 2 with DYY6 selected: "QA station check msg 2 sent with DYY6 selected 38414"
+msg "QA station check msg 1 sent with AQWA selecte": sent to 4/4; each driver: {"Chad Elnahal":"delivered","janeil":"delivered","jjiaa":"delivered","Allister Allman":"undelivered 30034"}
+msg "QA station check msg 2 sent with DYY6 selecte": sent to 4/4; each driver: {"Chad Elnahal":"delivered","janeil":"delivered","jjiaa":"delivered","Allister Allman":"undelivered 30034"}
+server, AQWA selected, "QA station check msg 1 sent with AQWA selecte": list delivered 3/4, delivery_status delivered 3
+server, AQWA selected, "QA station check msg 2 sent with DYY6 selecte": list delivered 3/4, delivery_status delivered 3
+screen, AQWA selected: count lines [Message sent to 3/4, Message sent to 3/4]
+  Message Info 1 (AQWA selected): Message Info | Arth | · | Nov 18/11/2026322, 9:42 AM | QA station check msg 2 sent with DYY6 selected 38414 | Not Delivered | Retry For All | Allister Allman | Retry | Delivered To | Chad Elnahal | janeil | jjiaa | QA station check 09:41 | Chad Elnahal, janeil, jjiaa, Allister All
+  Message Info 2 (AQWA selected): Message Info | Arth | · | Nov 18/11/2026322, 9:41 AM | QA station check msg 1 sent with AQWA selected 13667 | Not Delivered | Retry For All | Allister Allman | Retry | Delivered To | Chad Elnahal | janeil | jjiaa | QA station check 09:41 | Chad Elnahal, janeil, jjiaa, Allister All
+server, DYY6 selected, "QA station check msg 1 sent with AQWA selecte": list delivered 3/4, delivery_status delivered 3
+server, DYY6 selected, "QA station check msg 2 sent with DYY6 selecte": list delivered 3/4, delivery_status delivered 3
+screen, DYY6 selected: count lines [Message sent to 3/4, Message sent to 3/4]
+  Message Info 1 (DYY6 selected): Message Info | Arth | · | Nov 18/11/2026322, 9:42 AM | QA station check msg 2 sent with DYY6 selected 38414 | Not Delivered | Retry For All | Allister Allman | Retry | Delivered To | Chad Elnahal | janeil | jjiaa | QA station check 09:41 | Chad Elnahal, janeil, jjiaa, Allister All
+  Message Info 2 (DYY6 selected): Message Info | Arth | · | Nov 18/11/2026322, 9:41 AM | QA station check msg 1 sent with AQWA selected 13667 | Not Delivered | Retry For All | Allister Allman | Retry | Delivered To | Chad Elnahal | janeil | jjiaa | QA station check 09:41 | Chad Elnahal, janeil, jjiaa, Allister All
+browser sends: 1; blocked non-GET: none

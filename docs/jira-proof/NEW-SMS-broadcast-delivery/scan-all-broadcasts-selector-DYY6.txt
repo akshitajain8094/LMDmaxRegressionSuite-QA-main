@@ -1,0 +1,40 @@
+broadcasts: 10
+
+"abhijeet , Abraham Osher and 102 more" (6afd2e30a3b96f13e8cc988e), stations [], 6 messages
+  2026-11-18T05:49 text "test" shown 0/104 (sent to 46); 1:1 copies 12/12 {"undelivered":10,"delivered":2}
+  2026-11-18T05:22 text "hi" shown 0/104 (sent to 46); 1:1 copies 12/12 {"undelivered":10,"delivered":2}
+  2026-11-18T05:16 text "hey " shown 0/104 (sent to 46); 1:1 copies 12/12 {"undelivered":10,"delivered":2}
+  2026-11-18T05:15 text "hello " shown 0/104 (sent to 46); 1:1 copies 12/12 {"undelivered":10,"delivered":2}
+  2026-11-18T04:56 text "fffff" shown 0/1 (sent to 1); 1:1 copies 1/1 {"failed":1}
+  2026-11-18T04:48 text "fffff" shown 0/104 (sent to 104); 1:1 copies 12/12 {"failed":8,"undelivered":2,"delivered":2}
+
+"Abraham Osher , Alfred Adams and 1 more" (6aeb0f1ffb860e49b4c303db), stations [], 2 messages
+  2026-11-04T10:57 text "Dhfuf" shown 0/3 (sent to 0); 1:1 copies 0/0 {}
+  2026-11-04T10:55 text "Hccjg" shown 0/3 (sent to 3); 1:1 copies 3/3 {"failed":3}
+
+"Aksh , Alejandro Cortes Alvarado and 2 more" (6aeaf86dfb860e49b4c0b219), stations [], 1 messages
+  2026-11-04T09:18 text "Ggg" shown 0/4 (sent to 4); 1:1 copies 4/4 {"failed":4}
+
+"abhijeet and Aksh" (6aeaf74ffb860e49b4c0ac8c), stations [], 2 messages
+  2026-11-04T09:18 text "Ghu" shown 0/2 (sent to 0); 1:1 copies 0/0 {}
+  2026-11-04T09:13 text "Vvx" shown 0/2 (sent to 2); 1:1 copies 2/2 {"failed":2}
+
+"Chad Elnahal , parcel and 1 more" (6ae81ce951a982fb86f68d68), stations [], 1 messages
+  2026-11-02T05:17 text "hiiiii" shown 0/3 (sent to 3); 1:1 copies 3/3 {"failed":3}
+
+"alekh and Chad Elnahal" (6adf0fa96b3eaa223154e437), stations [], 2 messages
+  2026-11-02T05:17 text "hii" shown 0/1 (sent to 0); 1:1 copies 0/0 {}
+  2026-10-26T08:30 text "hello" shown 2/2 (sent to 2); 1:1 copies 2/2 {"delivered":2}
+
+"Abraham Osher , Ammar and 1 more" (6ae1db5a1185068026ae8b43), stations [], 1 messages
+  2026-10-28T11:24 text "dff" shown 1/3 (sent to 3); 1:1 copies 3/3 {"delivered":1,"undelivered":1,"undefined":1}
+
+"Andre Cirino" (6ad0b37cb2919d9e7c7f4572), stations [], 1 messages
+  2026-10-15T11:05 text "hi" shown 1/4 (sent to 4); 1:1 copies 4/4 {"delivered":1,"undelivered":2,"undefined":1}
+
+"New" (6aab71ce46af42f6659b4eec), stations [], 1 messages
+  2026-09-17T04:51 text "chgbv" shown 0/4 (sent to 4); 1:1 copies 3/4 {"failed":3} missing for 33256
+
+"alekh , anthony LoRe and 2 more" (6aab71ab46af42f6659b4dcf), stations [], 2 messages
+  2026-09-17T04:50 text "Eswj" shown 0/4 (sent to 0); 1:1 copies 0/0 {}
+  2026-09-17T04:50 text "Dkdj" shown 0/4 (sent to 4); 1:1 copies 3/4 {"failed":3} missing for 33256

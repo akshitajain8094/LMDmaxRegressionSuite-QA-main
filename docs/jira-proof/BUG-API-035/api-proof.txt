@@ -1,0 +1,3280 @@
+=== ANN-117: Verify that an attachment's file link cannot be opened without a login (BUG-API-035)
+tests/api/announcements/announcements.spec.js:184
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/announcements/v1/attachments
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Attachments uploaded",
+  "data": [
+    {
+      "attachment_id": "6afacd2ba3b96f13e8c9a589",
+      "file_name": "qa-sample.pdf",
+      "file_type": "pdf",
+      "mime_type": "application/pdf",
+      "size": 587
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "announcement_controller",
+  "signature": "1794821419445.X5nnGMmnTMS3n",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/perf-user/v3/users
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Success",
+  "data": [
+    {
+      "id": "13953",
+      "name": "abcd",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "61529758",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34150",
+      "name": "abhijeet",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "83420436",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38573",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34257",
+      "name": "Aksh",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "87115837",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38598",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33818",
+      "name": "Alfred Adams",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "15998678",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38463",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19093",
+      "name": "aliaya",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "26045415",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37828",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34367",
+      "name": "Ammar",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "74656755",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38637",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "13832",
+      "name": "Arth",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "owner",
+      "perf_email": null,
+      "account_id": "58506167",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "1",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 1,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        },
+        {
+          "type": 1,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34187",
+      "name": "ASDFASD",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "47402964",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38589",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34253",
+      "name": "burgos marlin",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "46832623",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "13848",
+      "name": "Chad Elnahal",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "70792840",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "33256",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18558",
+      "name": "checkingggg",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "87508922",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18582",
+      "name": "checkinggtwo",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "22118158",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37453",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19525",
+      "name": "checkkinggg",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "91051719",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34034",
+      "name": "cheery",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "35275059",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38550",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18553",
+      "name": "dev",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "91548727",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37431",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18674",
+      "name": "dhavii",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "25373591",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37506",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34178",
+      "name": "divan",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "27185954",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38581",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33959",
+      "name": "dsf",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "65032879",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38506",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34035",
+      "name": "dsfsd",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "85271825",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38551",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19611",
+      "name": "dsvsdd",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "49809377",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38285",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18424",
+      "name": "fdfdf",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "57793750",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37332",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34050",
+      "name": "fdgfg",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "47663712",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18556",
+      "name": "feeeeeeefe",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "40092347",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "33958",
+      "name": "fgfg",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "26359418",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38505",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34179",
+      "name": "gimmy",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "32833730",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38582",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18992",
+      "name": "girraj",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "57708804",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37742",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18993",
+      "name": "girri",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "96202867",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37743",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19615",
+      "name": "gyani",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "40705252",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        },
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "15240",
+      "name": "Hassan Sambolah",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "70315070",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18665",
+      "name": "heel",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "22742216",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37500",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19017",
+      "name": "janeil",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "58050936",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37766",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34180",
+      "name": "jekky",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "89223554",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38583",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "15124",
+      "name": "jfgh",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "16965415",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "34393",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19012",
+      "name": "jjiaa",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "33363148",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37762",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34052",
+      "name": "kapil",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "31694565",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38557",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19088",
+      "name": "kiaaaa",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "77524822",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "37823",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18705",
+      "name": "koala",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "29236897",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37537",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33951",
+      "name": "Maximo",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "71780962",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38499",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18575",
+      "name": "mohana",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "57950389",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37446",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "17321",
+      "name": "multiple",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "24067516",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38639",
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34423",
+      "name": "newly",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "71572692",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34488",
+      "name": "parle",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "82274753",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18658",
+      "name": "perchange",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "42017494",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37494",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34378",
+      "name": "qa admin",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "76743676",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38646",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34377",
+      "name": "qa driver",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "38121763",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38645",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34417",
+      "name": "qwerty",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "18851853",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18554",
+      "name": "raman",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "48156573",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37432",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33994",
+      "name": "reetu",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "49997478",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38526",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19667",
+      "name": "ricky",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "84231569",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38335",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34357",
+      "name": "SADASD",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "67547706",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38633",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19614",
+      "name": "scsc",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "88528447",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38288",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19013",
+      "name": "sdcs",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "94730600",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37763",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19551",
+      "name": "sdsd",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "24109937",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38248",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34358",
+      "name": "SDSFS",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "32613566",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38634",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34086",
+      "name": "sfas",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "89716099",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38632",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33946",
+      "name": "sfsf",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "23713124",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38494",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34416",
+      "name": "tempadmin",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "78242473",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "14297",
+      "name": "test",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "73531994",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34431",
+      "name": "testadmineight",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "27971277",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34436",
+      "name": "testadminnine",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "29488113",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34430",
+      "name": "testadminseven",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "75427473",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34425",
+      "name": "testadminsix",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "41753527",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        },
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18704",
+      "name": "uhil",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "49937873",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37536",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "17392",
+      "name": "vicky",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "63019390",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "36704",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18669",
+      "name": "vishuuu",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "74652423",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37501",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34149",
+      "name": "wayra",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "63355631",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "user_controller",
+  "signature": "1794821419817.bTwSYeT640HsM",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/announcements/v1/create
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Announcement sent to 1 driver",
+  "data": {
+    "announcement_id": "6afacd2ca3b96f13e8c9a58e",
+    "sent_to": 1,
+    "is_duplicate": false
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "announcement_controller",
+  "signature": "1794821420172.0ZKfcxe4LtAhi",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/announcements/v1/6afacd2ca3b96f13e8c9a58e/overview
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "announcement_id": "6afacd2ca3b96f13e8c9a58e",
+    "title": "QA announcement 1794821421403",
+    "description": "QA automation announcement. Please ignore.",
+    "audience": {
+      "type": "selected",
+      "recipients": 1,
+      "includes_new_drivers": false
+    },
+    "settings": {
+      "comment_mode": "everyone",
+      "acknowledgement_enabled": false
+    },
+    "created_by": {
+      "user_id": "13832",
+      "role": "owner",
+      "name": "Arth"
+    },
+    "published_at": "2026-11-16T09:30:20.203Z",
+    "is_edited": false,
+    "last_edited_at": null,
+    "last_edited_by": null,
+    "attachments": [
+      {
+        "attachment_id": "6afacd2ba3b96f13e8c9a589",
+        "file_name": "qa-sample.pdf",
+        "file_type": "pdf",
+        "mime_type": "application/pdf",
+        "size": 587,
+        "url": "https://d2jilumhwuwrmw.cloudfront.net/announcement/staging/477//qa-sample_1794821419456.pdf"
+      }
+    ],
+    "delivery": {
+      "sent_to": 1,
+      "seen": 0,
+      "seen_percent": 0,
+      "not_seen": 1,
+      "acknowledged": null,
+      "acknowledged_percent": null
+    },
+    "tabs": {
+      "activity_count": 1,
+      "history_count": 1
+    },
+    "comments": {
+      "count": 0,
+      "unread_count": 0,
+      "threads": []
+    },
+    "can_edit": true,
+    "can_delete": true
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "announcement_controller",
+  "signature": "1794821420551.EVnmhCjIDTYFh",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: https://d2jilumhwuwrmw.cloudfront.net/announcement/staging/477//qa-sample_1794821419456.pdf
+expect(received).not.toBe(expected) // Object.is equality
+Expected: not 200
+
+
+=== ANN-117: Verify that the attachment link on the details page does not open without a login (BUG-API-035)
+tests/ui/announcements.spec.js:1051
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/announcements/v1/attachments
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Attachments uploaded",
+  "data": [
+    {
+      "attachment_id": "6afacd67a3b96f13e8c9a70d",
+      "file_name": "qa-sample.pdf",
+      "file_type": "pdf",
+      "mime_type": "application/pdf",
+      "size": 587
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "announcement_controller",
+  "signature": "1794821479269.6eNFNgAeMsX0N",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/perf-user/v3/users
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Success",
+  "data": [
+    {
+      "id": "13953",
+      "name": "abcd",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "61529758",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34150",
+      "name": "abhijeet",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "83420436",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38573",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34257",
+      "name": "Aksh",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "87115837",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38598",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33818",
+      "name": "Alfred Adams",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "15998678",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38463",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19093",
+      "name": "aliaya",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "26045415",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37828",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34367",
+      "name": "Ammar",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "74656755",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38637",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "13832",
+      "name": "Arth",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "owner",
+      "perf_email": null,
+      "account_id": "58506167",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "1",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 1,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        },
+        {
+          "type": 1,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34187",
+      "name": "ASDFASD",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "47402964",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38589",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34253",
+      "name": "burgos marlin",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "46832623",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "13848",
+      "name": "Chad Elnahal",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "70792840",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "33256",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18558",
+      "name": "checkingggg",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "87508922",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18582",
+      "name": "checkinggtwo",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "22118158",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37453",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19525",
+      "name": "checkkinggg",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "91051719",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34034",
+      "name": "cheery",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "35275059",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38550",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18553",
+      "name": "dev",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "91548727",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37431",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18674",
+      "name": "dhavii",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "25373591",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37506",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34178",
+      "name": "divan",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "27185954",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38581",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33959",
+      "name": "dsf",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "65032879",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38506",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34035",
+      "name": "dsfsd",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "85271825",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38551",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19611",
+      "name": "dsvsdd",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "49809377",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38285",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18424",
+      "name": "fdfdf",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "57793750",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37332",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34050",
+      "name": "fdgfg",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "47663712",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18556",
+      "name": "feeeeeeefe",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "40092347",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "33958",
+      "name": "fgfg",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "26359418",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38505",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34179",
+      "name": "gimmy",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "32833730",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38582",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18992",
+      "name": "girraj",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "57708804",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37742",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18993",
+      "name": "girri",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "96202867",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37743",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19615",
+      "name": "gyani",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "40705252",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        },
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "15240",
+      "name": "Hassan Sambolah",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "70315070",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18665",
+      "name": "heel",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "22742216",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37500",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19017",
+      "name": "janeil",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "58050936",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37766",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34180",
+      "name": "jekky",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "89223554",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38583",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "15124",
+      "name": "jfgh",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "16965415",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "34393",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19012",
+      "name": "jjiaa",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "33363148",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37762",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34052",
+      "name": "kapil",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "31694565",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38557",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19088",
+      "name": "kiaaaa",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "77524822",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "37823",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18705",
+      "name": "koala",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": false,
+      "account_id": "29236897",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37537",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33951",
+      "name": "Maximo",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "71780962",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38499",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18575",
+      "name": "mohana",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "57950389",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37446",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "17321",
+      "name": "multiple",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "24067516",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38639",
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34423",
+      "name": "newly",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "71572692",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34488",
+      "name": "parle",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "82274753",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18658",
+      "name": "perchange",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "42017494",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37494",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34378",
+      "name": "qa admin",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "76743676",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38646",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34377",
+      "name": "qa driver",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "38121763",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38645",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34417",
+      "name": "qwerty",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "18851853",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18554",
+      "name": "raman",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "48156573",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37432",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33994",
+      "name": "reetu",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "49997478",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38526",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19667",
+      "name": "ricky",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "84231569",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38335",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34357",
+      "name": "SADASD",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "67547706",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38633",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19614",
+      "name": "scsc",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "88528447",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38288",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19013",
+      "name": "sdcs",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "94730600",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37763",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "19551",
+      "name": "sdsd",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "24109937",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38248",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34358",
+      "name": "SDSFS",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "32613566",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38634",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34086",
+      "name": "sfas",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "89716099",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": "38632",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "33946",
+      "name": "sfsf",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "23713124",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "38494",
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34416",
+      "name": "tempadmin",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "78242473",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "14297",
+      "name": "test",
+      "email": "*** hidden ***",
+      "is_deleted": true,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "73531994",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34431",
+      "name": "testadmineight",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "27971277",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34436",
+      "name": "testadminnine",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "29488113",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34430",
+      "name": "testadminseven",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": false,
+      "account_id": "75427473",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "34425",
+      "name": "testadminsix",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "41753527",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        },
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    },
+    {
+      "id": "18704",
+      "name": "uhil",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "49937873",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37536",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        },
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "17392",
+      "name": "vicky",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "63019390",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "36704",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 578,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "18669",
+      "name": "vishuuu",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "driver",
+      "perf_email": null,
+      "account_id": "74652423",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "4",
+      "driver_id": "37501",
+      "stations": [
+        {
+          "type": 4,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": "promoted"
+        }
+      ],
+      "has_promoted_station": true
+    },
+    {
+      "id": "34149",
+      "name": "wayra",
+      "email": "*** hidden ***",
+      "is_deleted": false,
+      "role": "admin",
+      "perf_email": null,
+      "account_id": "63355631",
+      "phone": "*** hidden ***",
+      "is_phone_verified": false,
+      "dob": null,
+      "type": "2",
+      "driver_id": null,
+      "stations": [
+        {
+          "type": 2,
+          "assigned": true,
+          "station_id": 477,
+          "permission_upgrade": null
+        }
+      ],
+      "has_promoted_station": false
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "user_controller",
+  "signature": "1794821479642.lnTPfY8eW7IGi",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/announcements/v1/create
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Announcement sent to 1 driver",
+  "data": {
+    "announcement_id": "6afacd68a3b96f13e8c9a712",
+    "sent_to": 1,
+    "is_duplicate": false
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "announcement_controller",
+  "signature": "1794821479985.QS9Z6HVX6d5hI",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: https://d2jilumhwuwrmw.cloudfront.net/announcement/staging/477//qa-sample_1794821479277.pdf
+expect(received).not.toBe(expected) // Object.is equality
+Expected: not 200

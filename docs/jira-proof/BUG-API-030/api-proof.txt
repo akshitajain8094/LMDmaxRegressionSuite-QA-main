@@ -1,0 +1,44 @@
+=== TC-11: Verify that a deleted image cannot be opened with its link any more (Chat TC_16) (BUG-API-030)
+tests/api/chat/deleted-message-preview.spec.js:261
+
+Address: https://staging-messaging.fleet.lmdmax.com/lmd/twms/company-chat/578/chat/v1/delete_message
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Message updated successfully",
+  "data": {
+    "id": "102828",
+    "sender": "13833",
+    "content": "",
+    "attachments": [
+      {
+        "url": "https://d2jilumhwuwrmw.cloudfront.net/chat/files/raw/f0aa1dbe-2b25-42ad-b178-315038263ac4/source.jpg",
+        "fileName": "qa-image.jpeg",
+        "mimeType": "image/jpeg",
+        "attachmentID": "f0aa1dbe-2b25-42ad-b178-315038263ac4"
+      }
+    ],
+    "admin_sender": 13832,
+    "chat_room_id": "5136",
+    "deleted_by": "13832",
+    "affectedUser": [
+      {
+        "user_id": "34257",
+        "chat_room_id": "5136"
+      }
+    ],
+    "isLastMesageSame": true
+  },
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": null,
+  "type": "users",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).not.toBe(expected) // Object.is equality
+Expected: not 200

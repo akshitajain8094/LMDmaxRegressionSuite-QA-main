@@ -1,0 +1,23 @@
+=== TC-02: Verify that the unregistered-email answer says it failed (TC_LOGIN_077) (BUG-API-027)
+tests/api/login/forgot-password.spec.js:28
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/users/v1/user/credentials/request
+Status: 404
+
+Answer:
+{
+  "success": true,
+  "message": "user not found",
+  "data": null,
+  "metadata": null,
+  "status": 404,
+  "action": "forgot_password",
+  "signature": "1794821380706.8dNxGIAV4WTme",
+  "type": "users",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: false
+Received: true

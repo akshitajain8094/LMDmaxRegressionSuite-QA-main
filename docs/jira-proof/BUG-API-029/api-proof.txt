@@ -1,0 +1,48 @@
+=== TC-12: Verify that deleting an unknown message returns 404 (BUG-API-029)
+tests/api/chat/deleted-message-preview.spec.js:278
+
+Address: https://staging-messaging.fleet.lmdmax.com/lmd/twms/chat/v1/delete_message
+Status: 500
+
+Answer:
+{
+  "success": false,
+  "message": "Error in Message updation",
+  "data": {},
+  "metadata": null,
+  "status": 500,
+  "action": null,
+  "signature": null,
+  "type": "users",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 404
+Received: 500
+
+
+=== TC-13: Verify that a message cannot be deleted through another conversation (BUG-API-029)
+tests/api/chat/deleted-message-preview.spec.js:291
+
+Address: https://staging-messaging.fleet.lmdmax.com/lmd/twms/chat/v1/delete_message
+Status: 500
+
+Answer:
+{
+  "success": false,
+  "message": "Error in Message updation",
+  "data": {},
+  "metadata": null,
+  "status": 500,
+  "action": null,
+  "signature": null,
+  "type": "users",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 404
+Received: 500

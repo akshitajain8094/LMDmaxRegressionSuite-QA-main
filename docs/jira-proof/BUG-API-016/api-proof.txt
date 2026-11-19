@@ -1,0 +1,97 @@
+=== TC-05: Verify that a signed write-up cannot be deleted (BUG-API-016)
+tests/api/e-signature/write-up-journeys.spec.js:482
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/e-signature/v2/create
+Status: 200
+
+Answer:
+{
+  "failed_records": [],
+  "success": true,
+  "message": "Success",
+  "data": [
+    {
+      "company_id": "541",
+      "driver_id": "38267",
+      "driver_name": "Jordan Whitaker",
+      "created_by_name": "Chat Account0",
+      "created_by": "99713304",
+      "title": "Sign & Signal violation on route DYY1-05",
+      "message": "Hi Jordan Whitaker\n\nPlease e-sign the Sign & Signal violation on route DYY1-05.\n\nLink :- ${link}\n\nRegards,\nPAPAYA LMD",
+      "report_url": null,
+      "report_date": "2026-11-16T00:00:00.000Z",
+      "report_type": "write-up",
+      "status": "sent",
+      "refused_by": "",
+      "refused_reason": "",
+      "attachments": [],
+      "violation": [
+        "Sign & Signal"
+      ],
+      "notes": "<p>Netradyne recorded a stop sign violation on route DYY1-05.</p>",
+      "reminder_dates": [],
+      "sent_at": "2026-11-16T09:29:30.335Z",
+      "sent_from": "message",
+      "channels": [
+        "sms"
+      ],
+      "driver_sign_url": null,
+      "company_logo_url": null,
+      "company_sign_url": "https://d2jilumhwuwrmw.cloudfront.net/e-signature/staging/541/company_sign.jpeg",
+      "driver_sign_date": null,
+      "group_id": null,
+      "is_deleted": false,
+      "deleted_at": null,
+      "deleted_by": null,
+      "_id": "6afaccfaa3b96f13e8c9a3b5",
+      "created_at": "2026-11-16T09:29:30.336Z",
+      "updated_at": "2026-11-16T09:29:30.336Z",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "e-signature-controller",
+  "signature": "1794821370327.ytDi44oGN6oJC",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/e-signature/v1/sign_form
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "File sucessfully uploaded",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "e-signature-controller",
+  "signature": "1794821370945.DbJ9QOiD86XT7",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/e-signature/v1/6afaccfaa3b96f13e8c9a3b5
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Report deleted successfully.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "e-signature-controller",
+  "signature": "1794821371812.nGdT9WLplqw95",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: false
+Received: true

@@ -1,0 +1,672 @@
+=== TC-10: Verify that end before start is rejected (BUG-API-002)
+tests/api/call-outs/call-out.spec.js:278
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/call_out/v2/call_out?start=2026-08-31&end=2026-08-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "CallOut data fetched successfully",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821360972.74cei5joUeLyh",
+  "type": "success",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-23: Verify that end before start is rejected (BUG-API-002)
+tests/api/dashboard/dashboard-drivers.spec.js:562
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/dashboard_drivers?start=2026-08-31&end=2025-09-01&report_name=writeupReport
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": "get_drivers_by_report_and_metric",
+  "signature": "1794821365053.McvcfPEOfnq5N",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-19: Verify that end week before start week is rejected (BUG-API-002)
+tests/api/dashboard/weekly-insights.spec.js:402
+
+Address: https://staging-api.fleet.lmdmax.com/dashboard/v1/weekly_insights?start=202634&end=202625&type=dsp
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [
+    {
+      "type": "positive",
+      "title": "Seatbelt Off Rate Compliant",
+      "description": "Seatbelt Off Rate stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "scorecardReport",
+      "field": "seatbelt_off_rate",
+      "ids": [],
+      "key": 201
+    },
+    {
+      "type": "positive",
+      "title": "Speeding Event Rate Compliant",
+      "description": "Speeding Event Rate stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "scorecardReport",
+      "field": "speeding_event_rate",
+      "ids": [],
+      "key": 203
+    },
+    {
+      "type": "positive",
+      "title": "Sign Signal Violations Rate Compliant",
+      "description": "Sign Signal Violations Rate stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "scorecardReport",
+      "field": "sign_signal_violations_rate",
+      "ids": [],
+      "key": 205
+    },
+    {
+      "type": "positive",
+      "title": "Distractions Rate Compliant",
+      "description": "Distractions Rate stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "scorecardReport",
+      "field": "distractions_rate",
+      "ids": [],
+      "key": 207
+    },
+    {
+      "type": "positive",
+      "title": "Following Distance Rate Compliant",
+      "description": "Following Distance Rate stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "scorecardReport",
+      "field": "following_distance_rate",
+      "ids": [],
+      "key": 209
+    },
+    {
+      "type": "positive",
+      "title": "Customer Delivery Feedback Dpmo Compliant",
+      "description": "Customer Delivery Feedback Dpmo stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "negativeCustomerFeedbackReport",
+      "field": "customer_delivery_feedback_dpmo",
+      "ids": [],
+      "key": 211
+    },
+    {
+      "type": "positive",
+      "title": "Delivery Success Behaviors Compliant",
+      "description": "Delivery Success Behaviors stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "scorecardReport",
+      "field": "delivery_success_behaviors",
+      "ids": [],
+      "key": 215
+    },
+    {
+      "type": "positive",
+      "title": "Photo On Delivery Acceptance Rate Compliant",
+      "description": "Photo On Delivery Acceptance Rate stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "podReport",
+      "field": "photo_on_delivery_acceptance_rate",
+      "ids": [],
+      "key": 217
+    },
+    {
+      "type": "positive",
+      "title": "Pickup Success Behaviors Compliant",
+      "description": "Pickup Success Behaviors stayed within threshold for all -8 weeks.",
+      "color": "green",
+      "report_name": "scorecardReport",
+      "field": "pickup_success_behaviors",
+      "ids": [],
+      "key": 219
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "weekly_insights",
+  "signature": "1794821366527.HeWZoU9XoLqVX",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-12: Verify that a suspension that ends before it starts is rejected (BUG-API-002)
+tests/api/drivers/driver-lifecycle-journeys.spec.js:762
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Driver profile processing windows finalized successfully across all database channels.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821385126.8wD9jukSRF9My",
+  "type": "",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/suspended/v3/suspend_driver/update
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Targeted block status released and synchronized successfully.",
+  "data": null,
+  "metadata": null,
+  "status": 200,
+  "action": "suspended_drivers_controller",
+  "signature": "1794821385495.kVDSoVgG7n4uz",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-14: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/attendance-dashboard.spec.js:302
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/attendance_dashboard?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "value": 0,
+        "color": "#B02418",
+        "label": "Unexcused"
+      },
+      {
+        "value": 0,
+        "color": "#FFA389",
+        "label": "Excused"
+      },
+      {
+        "value": 0,
+        "label": "Total"
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_latest_safety",
+  "signature": "1794821370307.v6OHZjxkfsCFk",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-14: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/attendance-extras.spec.js:310
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/attendance_extras?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "value": 0,
+        "color": "#B02418",
+        "label": "unexcused_callout"
+      },
+      {
+        "value": 0,
+        "color": "#FFA389",
+        "label": "excused_callout"
+      },
+      {
+        "value": 0,
+        "color": "#C97870",
+        "label": "assigned_other_job"
+      },
+      {
+        "value": 0,
+        "color": "#EFD3D1",
+        "label": "sent_home"
+      },
+      {
+        "value": 0,
+        "label": "Total"
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_latest_safety",
+  "signature": "1794821371327.15LZjCJoNZVxa",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-12: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/delivery-dashboard.spec.js:263
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/delivery_dashboard?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "value": 0,
+        "color": "#AFDAEF",
+        "label": "Delivered"
+      },
+      {
+        "value": 0,
+        "color": "#D7ECF7",
+        "label": "Dispatched"
+      },
+      {
+        "value": 0,
+        "color": "#408EB3",
+        "label": "DNR"
+      },
+      {
+        "value": 0,
+        "color": "#36A2D6",
+        "label": "Returned"
+      },
+      {
+        "value": 0,
+        "label": "Total"
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_daily_dashboard",
+  "signature": "1794821372041.vo1QR8hsrws25",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-12: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/e-mentor-dashboard.spec.js:266
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/e_mentor_dashboard?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "value": 0,
+        "color": "#664E00",
+        "label": "Fico_<_800"
+      },
+      {
+        "value": 0,
+        "color": "#997500",
+        "label": "Accel"
+      },
+      {
+        "value": 0,
+        "color": "#CC9C00",
+        "label": "Braking"
+      },
+      {
+        "value": 0,
+        "color": "#FFC300",
+        "label": "Cornering"
+      },
+      {
+        "value": 0,
+        "color": "#FFDA63",
+        "label": "Speeding"
+      },
+      {
+        "value": 0,
+        "color": "#FBE7A5",
+        "label": "Distraction"
+      },
+      {
+        "value": 0,
+        "color": "#FFF0BF",
+        "label": "Seatbelt"
+      },
+      {
+        "value": 0,
+        "label": "Total"
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_latest_safety",
+  "signature": "1794821377870.P2A3nWNRnxlpX",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-12: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/eoc-dashboard.spec.js:262
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/eoc_dashboard?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "value": 0,
+        "color": "#FD8372",
+        "label": "Drivers with a < 50% average"
+      },
+      {
+        "value": 0,
+        "color": "#FFB5AB",
+        "label": "Drivers with a 50%-80% average"
+      },
+      {
+        "value": 0,
+        "color": "#FFCFC9",
+        "label": "Drivers with a 80%-100% average"
+      },
+      {
+        "value": 0,
+        "label": "Total"
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_daily_dashboard",
+  "signature": "1794821378010.WqBSPkH9au91a",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-14: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/netradyne-dashboard.spec.js:315
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/netradyne_dashboard?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "value": 0,
+        "color": "#7B39D2",
+        "label": "Sign/Signal Violations"
+      },
+      {
+        "value": 0,
+        "color": "#9747FF",
+        "label": "Driver Distraction"
+      },
+      {
+        "value": 0,
+        "color": "#AC6CFF",
+        "label": "Following Distance"
+      },
+      {
+        "value": 0,
+        "color": "#C191FF",
+        "label": "Speeding Violations"
+      },
+      {
+        "value": 0,
+        "color": "#D5B5FF",
+        "label": "Seatbelt Compliance"
+      },
+      {
+        "value": 0,
+        "label": "Total"
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_latest_safety",
+  "signature": "1794821378435.rNGZ70lhrBa6P",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-12: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/quality-dashboard.spec.js:261
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/quality_dashboard?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "label": "Total Delievered Packages",
+        "value": 0,
+        "color": "#343C52"
+      },
+      {
+        "label": "Total Routes Completed",
+        "value": 0,
+        "color": "#343C52"
+      },
+      {
+        "label": "Total DNR",
+        "value": 0,
+        "color": "#343C52"
+      },
+      {
+        "label": "Avg. DCR",
+        "color": "#67CFAA",
+        "value": 0
+      },
+      {
+        "label": "Avg. SWC-POD",
+        "color": "#EB6932",
+        "value": 0
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_daily_dashboard",
+  "signature": "1794821379151.9YG9Zry9tBtnn",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-14: Verify that end before start is rejected (BUG-API-002)
+tests/api/graph-data/rescue-dashboard.spec.js:302
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/graph/v2/rescue_dashboard?start=2026-08-31&end=2025-09-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "success",
+  "data": {
+    "driver_data": [],
+    "graph_data": [
+      {
+        "value": 0,
+        "color": "#00A15D",
+        "label": "Completed"
+      },
+      {
+        "value": 0,
+        "color": "#A1ECCD",
+        "label": "Refused"
+      },
+      {
+        "value": 0,
+        "color": "#6AE5B2",
+        "label": "Received"
+      },
+      {
+        "value": 0,
+        "label": "Total"
+      }
+    ],
+    "start": "2026-08-31",
+    "end": "2025-09-01"
+  },
+  "metadata": null,
+  "status": 200,
+  "action": "get_latest_safety",
+  "signature": "1794821379893.teBqcIY1zVbFG",
+  "type": "",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200
+
+
+=== TC-06: Verify that end before start is rejected (BUG-API-002)
+tests/api/rescues/rescue.spec.js:175
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue?start=2026-08-31&end=2026-08-01
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821382454.PnDS0iJ468eDK",
+  "type": "success",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200

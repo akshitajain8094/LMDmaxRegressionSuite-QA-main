@@ -1,0 +1,32 @@
+=== TC-04: Verify that the Control Tower logout needs a login (BUG-API-028)
+tests/api/login/control-tower.spec.js:68
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/usrsrv/control_tower/v1/control_tower_logout
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "",
+  "data": [
+    null,
+    {
+      "acknowledged": true,
+      "modifiedCount": 0,
+      "upsertedId": null,
+      "upsertedCount": 0,
+      "matchedCount": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": "login",
+  "signature": "1794821380180.SkLzKgSZiY2ua",
+  "type": "users",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 401
+Received: 200

@@ -1,0 +1,57 @@
+Issue 1: lookup by transporter_id returns another driver too   (staging, AQWA 578, 2026-11-17T10:02:56.184Z)
+
+==== 1. DA Weekly Overview, Chad Elnahal only (transporter_id=A3D7TKWA5X4ZCT)
+> GET https://staging-api.fleet.lmdmax.com/lmd/prfsrv/da_weekly_overview/v2/da_weekly_overview_report?week_number=202642&transporter_id=A3D7TKWA5X4ZCT
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+< HTTP/1.1 200
+data: 2 row(s) → [
+ {
+  "transporter_id": "A36HI1M57TVKN0",
+  "name": "alyssa lily caceres",
+  "overall_standing": "Platinum",
+  "overall_score": "87.41"
+ },
+ {
+  "transporter_id": "A3D7TKWA5X4ZCT",
+  "name": "Chad Elnahal",
+  "overall_standing": "Platinum",
+  "overall_score": "99.93"
+ }
+]
+
+==== 2. Same report, alyssa caceres only (transporter_id=A36HI1M57TVKN0)
+> GET https://staging-api.fleet.lmdmax.com/lmd/prfsrv/da_weekly_overview/v2/da_weekly_overview_report?week_number=202642&transporter_id=A36HI1M57TVKN0
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+< HTTP/1.1 200
+data: 1 row(s) → [
+ {
+  "transporter_id": "A36HI1M57TVKN0",
+  "name": "alyssa lily caceres",
+  "overall_standing": "Platinum",
+  "overall_score": "87.41"
+ }
+]
+
+==== 3. Scorecard → driver page (compare), Chad only
+> GET https://staging-api.fleet.lmdmax.com/lmd/prfsrv/scorecard/v2/compare?transporter_id=A3D7TKWA5X4ZCT&week_number=202642
+> x-access-token: <arth token, AQWA 578>   x-access-user: 58506167
+< HTTP/1.1 200
+data.current: 2 record(s) → [
+ {
+  "transporter_id": "A36HI1M57TVKN0",
+  "s_no": "3",
+  "delivered": "700"
+ },
+ {
+  "transporter_id": "A3D7TKWA5X4ZCT",
+  "s_no": "16",
+  "delivered": "853"
+ }
+]
+
+==== 4. Every driver of week 42: which lookups return more than their own row
+checked 140 drivers; wrong lookups: 1
+A3D7TKWA5X4ZCT Chad Elnahal → also A36HI1M57TVKN0 alyssa lily caceres
+
+==== 5. Chad's driver profile on AQWA (driver 33256): does it mention alyssa?
+transporter_id = A3D7TKWA5X4ZCT | name = Chad Elnahal | profile mentions A36HI1M57TVKN0: false

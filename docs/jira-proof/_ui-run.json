@@ -1,0 +1,1328 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "-c",
+      "C:/Users/SOFTSE~1/AppData/Local/Temp/claude/dac434c987cdbb5b/88788ae8-1184-442d-a882-18e5673febc3/scratchpad/proof.config.js",
+      "--project=ui",
+      "--project=ui-chat",
+      "--project=ui-announcements",
+      "--no-deps",
+      "--grep",
+      "BUG-UI-0(0[1-68]|09|10)"
+    ],
+    "configFile": "C:\\Users\\SOFTSE~1\\AppData\\Local\\Temp\\claude\\dac434c987cdbb5b\\88788ae8-1184-442d-a882-18e5673febc3\\scratchpad\\proof.config.js",
+    "rootDir": "C:/Users/SOFTSE~1/AppData/Local/Temp/claude/dac434c987cdbb5b/88788ae8-1184-442d-a882-18e5673febc3/scratchpad",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 8
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/api",
+        "testIgnore": [
+          "**/chat/deleted-message-preview.spec.js",
+          "**/announcements/*.spec.js",
+          "**/rehire/*.spec.js"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "ui",
+        "name": "ui",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui",
+        "testIgnore": [
+          "**/chat-deleted-message.spec.js",
+          "**/announcements.spec.js",
+          "**/announcements/*.spec.js",
+          "**/rehire/*.spec.js"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "api-chat",
+        "name": "api-chat",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "**/chat/deleted-message-preview.spec.js"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "ui-chat",
+        "name": "ui-chat",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui",
+        "testIgnore": [],
+        "testMatch": [
+          "**/chat-deleted-message.spec.js"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "api-announcements",
+        "name": "api-announcements",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "**/announcements/*.spec.js"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "ui-announcements",
+        "name": "ui-announcements",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui",
+        "testIgnore": [],
+        "testMatch": [
+          "**/announcements.spec.js",
+          "**/announcements/*.spec.js"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "api-rehire",
+        "name": "api-rehire",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "**/rehire/*.spec.js"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/docs/jira-proof/_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "ui-rehire",
+        "name": "ui-rehire",
+        "testDir": "C:/Users/Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui",
+        "testIgnore": [],
+        "testMatch": [
+          "**/rehire/*.spec.js"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "name": "ui",
+        "testDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui",
+        "snapshotDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui",
+        "testIgnore": [
+          "**/chat-deleted-message.spec.js",
+          "**/announcements.spec.js",
+          "**/announcements/*.spec.js",
+          "**/rehire/*.spec.js"
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "screenshot": "on",
+          "trace": "on",
+          "video": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "baseURL": "https://staging.performance.lmdmax.com"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "ui"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "name": "ui-chat",
+        "testDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui",
+        "snapshotDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui",
+        "testIgnore": [],
+        "testMatch": "**/chat-deleted-message.spec.js",
+        "timeout": 90000,
+        "use": {
+          "screenshot": "on",
+          "trace": "on",
+          "video": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "baseURL": "https://staging.performance.lmdmax.com"
+        },
+        "dependencies": [
+          "api-chat"
+        ],
+        "ignoreSnapshots": false,
+        "__projectId": "ui-chat"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "name": "ui-announcements",
+        "testDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui",
+        "snapshotDir": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui",
+        "testIgnore": [],
+        "testMatch": [
+          "**/announcements.spec.js",
+          "**/announcements/*.spec.js"
+        ],
+        "timeout": 90000,
+        "use": {
+          "screenshot": "on",
+          "trace": "on",
+          "video": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "baseURL": "https://staging.performance.lmdmax.com"
+        },
+        "dependencies": [
+          "api-announcements"
+        ],
+        "ignoreSnapshots": false,
+        "__projectId": "ui-announcements"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "..\\..\\..\\..\\..\\..\\..\\..\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+      "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-04: Verify that the login page is ready within 3 seconds (TC_LOGIN_001) (BUG-UI-001)",
+          "ok": false,
+          "tags": [
+            "regression",
+            "knownbug"
+          ],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ui",
+              "projectName": "ui",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 13618,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m9118.70000000298\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m9118.70000000298\u001b[39m\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:65:24",
+                    "location": {
+                      "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                      "column": 24,
+                      "line": 65
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 63 |\u001b[39m         performance\u001b[33m.\u001b[39mgetEntriesByType(\u001b[32m'navigation'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mdomContentLoadedEventEnd\u001b[33m,\u001b[39m\n \u001b[90m 64 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 |\u001b[39m     expect(readyAfter)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 66 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 67 |\u001b[39m )\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                        "column": 24,
+                        "line": 65
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m9118.70000000298\u001b[39m\n\n  63 |         performance.getEntriesByType('navigation')[0].domContentLoadedEventEnd,\n  64 |     );\n> 65 |     expect(readyAfter).toBeLessThan(3000);\n     |                        ^\n  66 |   },\n  67 | );\n  68 |\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:65:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T10:02:39.714Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-04-Verify-that-th-4ff7e-ds-TC-LOGIN-001-BUG-UI-001--ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-04-Verify-that-th-4ff7e-ds-TC-LOGIN-001-BUG-UI-001--ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-04-Verify-that-th-4ff7e-ds-TC-LOGIN-001-BUG-UI-001--ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-04-Verify-that-th-4ff7e-ds-TC-LOGIN-001-BUG-UI-001--ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                    "column": 24,
+                    "line": 65
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "badc1754af1944f68b2b-7d8698cf9e67bcacb253",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/login.spec.js",
+          "line": 52,
+          "column": 1
+        },
+        {
+          "title": "TC-10: Verify that the Tab key goes Email → Password → eye icon → Forgot Password? → Sign In (TC_LOGIN_013) (BUG-UI-004)",
+          "ok": false,
+          "tags": [
+            "regression",
+            "knownbug"
+          ],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ui",
+              "projectName": "ui",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 27084,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Forgot Password?')\nExpected: focused\nReceived: inactive\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByText('Forgot Password?') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Forgot Password?')\u001b[22m\n\u001b[2m    33 × locator resolved to <p class=\"MuiTypography-root MuiTypography-body1 css-12cf1mx\">Forgot Password?</p>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Forgot Password?')\nExpected: focused\nReceived: inactive\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByText('Forgot Password?') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Forgot Password?')\u001b[22m\n\u001b[2m    33 × locator resolved to <p class=\"MuiTypography-root MuiTypography-body1 css-12cf1mx\">Forgot Password?</p>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:162:48",
+                    "location": {
+                      "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                      "column": 48,
+                      "line": 162
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 160 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39meyeIcon)\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m\n \u001b[90m 161 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Tab'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 162 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39mforgotPasswordLink)\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 163 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Tab'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39msignInButton)\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m\n \u001b[90m 165 |\u001b[39m   }\u001b[33m,\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                        "column": 48,
+                        "line": 162
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Forgot Password?')\nExpected: focused\nReceived: inactive\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByText('Forgot Password?') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Forgot Password?')\u001b[22m\n\u001b[2m    33 × locator resolved to <p class=\"MuiTypography-root MuiTypography-body1 css-12cf1mx\">Forgot Password?</p>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  160 |     await expect(loginPage.eyeIcon).toBeFocused();\n  161 |     await page.keyboard.press('Tab');\n> 162 |     await expect(loginPage.forgotPasswordLink).toBeFocused();\n      |                                                ^\n  163 |     await page.keyboard.press('Tab');\n  164 |     await expect(loginPage.signInButton).toBeFocused();\n  165 |   },\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:162:48"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T10:02:39.701Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-10-Verify-that-th-58cff-In-TC-LOGIN-013-BUG-UI-004--ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-10-Verify-that-th-58cff-In-TC-LOGIN-013-BUG-UI-004--ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-10-Verify-that-th-58cff-In-TC-LOGIN-013-BUG-UI-004--ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-10-Verify-that-th-58cff-In-TC-LOGIN-013-BUG-UI-004--ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                    "column": 48,
+                    "line": 162
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "badc1754af1944f68b2b-14383d99afb34cd21ee3",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/login.spec.js",
+          "line": 149,
+          "column": 1
+        },
+        {
+          "title": "TC-18: Verify that both empty boxes show a message each (TC_LOGIN_030) (BUG-UI-006)",
+          "ok": false,
+          "tags": [
+            "regression",
+            "knownbug"
+          ],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ui",
+              "projectName": "ui",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 28042,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Field cannot be empty')\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByText('Field cannot be empty') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Field cannot be empty')\u001b[22m\n\u001b[2m    33 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Field cannot be empty')\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByText('Field cannot be empty') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Field cannot be empty')\u001b[22m\n\u001b[2m    33 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:303:59",
+                    "location": {
+                      "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                      "column": 59,
+                      "line": 303
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 301 |\u001b[39m     \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39msignInButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 302 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 303 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Field cannot be empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 304 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 305 |\u001b[39m )\u001b[33m;\u001b[39m\n \u001b[90m 306 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                        "column": 59,
+                        "line": 303
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Field cannot be empty')\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByText('Field cannot be empty') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Field cannot be empty')\u001b[22m\n\u001b[2m    33 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  301 |     await loginPage.signInButton.click();\n  302 |\n> 303 |     await expect(page.getByText('Field cannot be empty')).toHaveCount(2);\n      |                                                           ^\n  304 |   },\n  305 | );\n  306 |\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:303:59"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T10:02:39.724Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-18-Verify-that-bo-28f91-ch-TC-LOGIN-030-BUG-UI-006--ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-18-Verify-that-bo-28f91-ch-TC-LOGIN-030-BUG-UI-006--ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-18-Verify-that-bo-28f91-ch-TC-LOGIN-030-BUG-UI-006--ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-18-Verify-that-bo-28f91-ch-TC-LOGIN-030-BUG-UI-006--ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                    "column": 59,
+                    "line": 303
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "badc1754af1944f68b2b-b950132e708d8ecdf93a",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/login.spec.js",
+          "line": 295,
+          "column": 1
+        },
+        {
+          "title": "TC-28: Verify that without internet the screen says \"No internet connection\" (TC_LOGIN_128) (BUG-UI-003)",
+          "ok": false,
+          "tags": [
+            "regression",
+            "knownbug"
+          ],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ui",
+              "projectName": "ui",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 28440,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/no internet/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/no internet/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/no internet/i)\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/no internet/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/no internet/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/no internet/i)\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:486:50",
+                    "location": {
+                      "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                      "column": 50,
+                      "line": 486
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 484 |\u001b[39m     \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39msignInButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 485 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 486 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/no internet/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 487 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39msignInButton)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m 488 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 489 |\u001b[39m )\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                        "column": 50,
+                        "line": 486
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/no internet/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/no internet/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/no internet/i)\u001b[22m\n\n\n  484 |     await loginPage.signInButton.click();\n  485 |\n> 486 |     await expect(page.getByText(/no internet/i)).toBeVisible();\n      |                                                  ^\n  487 |     await expect(loginPage.signInButton).toBeEnabled();\n  488 |   },\n  489 | );\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js:486:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T10:02:39.740Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-28-Verify-that-wi-80ff2-on-TC-LOGIN-128-BUG-UI-003--ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-28-Verify-that-wi-80ff2-on-TC-LOGIN-128-BUG-UI-003--ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-28-Verify-that-wi-80ff2-on-TC-LOGIN-128-BUG-UI-003--ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\login-TC-28-Verify-that-wi-80ff2-on-TC-LOGIN-128-BUG-UI-003--ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\login.spec.js",
+                    "column": 50,
+                    "line": 486
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "badc1754af1944f68b2b-c0124d33bf980d9e1f55",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/login.spec.js",
+          "line": 474,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "..\\..\\..\\..\\..\\..\\..\\..\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\session.spec.js",
+      "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/session.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-07: Verify that after login the user lands on the page they asked for (TC_LOGIN_121) (BUG-UI-005)",
+          "ok": false,
+          "tags": [
+            "regression",
+            "knownbug"
+          ],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ui",
+              "projectName": "ui",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "failed",
+                  "duration": 44561,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/your-scorecard/\u001b[39m\nReceived string:  \u001b[31m\"https://staging.performance.lmdmax.com/v2/dashboard/daily-highlights\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 30000ms\u001b[22m\n\u001b[2m    7 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m      - unexpected value \"https://staging.performance.lmdmax.com/signIn\"\u001b[22m\n\u001b[2m    53 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"https://staging.performance.lmdmax.com/v2/dashboard/daily-highlights\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/your-scorecard/\u001b[39m\nReceived string:  \u001b[31m\"https://staging.performance.lmdmax.com/v2/dashboard/daily-highlights\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 30000ms\u001b[22m\n\u001b[2m    7 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m      - unexpected value \"https://staging.performance.lmdmax.com/signIn\"\u001b[22m\n\u001b[2m    53 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"https://staging.performance.lmdmax.com/v2/dashboard/daily-highlights\"\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\session.spec.js:119:24",
+                    "location": {
+                      "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\session.spec.js",
+                      "column": 24,
+                      "line": 119
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 117 |\u001b[39m\n \u001b[90m 118 |\u001b[39m     \u001b[90m// Today: Daily Highlights\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/your-scorecard/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 121 |\u001b[39m )\u001b[33m;\u001b[39m\n \u001b[90m 122 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\session.spec.js",
+                        "column": 24,
+                        "line": 119
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/your-scorecard/\u001b[39m\nReceived string:  \u001b[31m\"https://staging.performance.lmdmax.com/v2/dashboard/daily-highlights\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 30000ms\u001b[22m\n\u001b[2m    7 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m      - unexpected value \"https://staging.performance.lmdmax.com/signIn\"\u001b[22m\n\u001b[2m    53 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"https://staging.performance.lmdmax.com/v2/dashboard/daily-highlights\"\u001b[22m\n\n\n  117 |\n  118 |     // Today: Daily Highlights\n> 119 |     await expect(page).toHaveURL(/your-scorecard/, { timeout: 30000 });\n      |                        ^\n  120 |   },\n  121 | );\n  122 |\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\session.spec.js:119:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T10:02:39.714Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\session-TC-07-Verify-that--0f060-or-TC-LOGIN-121-BUG-UI-005--ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\session-TC-07-Verify-that--0f060-or-TC-LOGIN-121-BUG-UI-005--ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\session-TC-07-Verify-that--0f060-or-TC-LOGIN-121-BUG-UI-005--ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\session-TC-07-Verify-that--0f060-or-TC-LOGIN-121-BUG-UI-005--ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\session.spec.js",
+                    "column": 24,
+                    "line": 119
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbed42a64022ae295c2-1afd0eda57c58f913054",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/session.spec.js",
+          "line": 108,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "..\\..\\..\\..\\..\\..\\..\\..\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js",
+      "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/sign-in-options.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-04: Verify that an unregistered email gets no OTP and a clear message (TC_LOGIN_133, TC_LOGIN_110) (BUG-UI-002)",
+          "ok": false,
+          "tags": [
+            "regression",
+            "knownbug"
+          ],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ui",
+              "projectName": "ui",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "failed",
+                  "duration": 29101,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/not found|not registered/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/not found|not registered/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/not found|not registered/i)\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/not found|not registered/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/not found|not registered/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/not found|not registered/i)\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js:71:63",
+                    "location": {
+                      "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js",
+                      "column": 63,
+                      "line": 71
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 69 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Verify'\u001b[39m }))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m     \u001b[90m// Today: \"Something went wrong\"\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/not found|not registered/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 73 |\u001b[39m )\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js",
+                        "column": 63,
+                        "line": 71
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/not found|not registered/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/not found|not registered/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/not found|not registered/i)\u001b[22m\n\n\n  69 |     await expect(page.getByRole('button', { name: 'Verify' })).toHaveCount(0);\n  70 |     // Today: \"Something went wrong\"\n> 71 |     await expect(page.getByText(/not found|not registered/i)).toBeVisible();\n     |                                                               ^\n  72 |   },\n  73 | );\n  74 |\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js:71:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T10:02:39.714Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-04-Veri-e90b5-33-TC-LOGIN-110-BUG-UI-002--ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-04-Veri-e90b5-33-TC-LOGIN-110-BUG-UI-002--ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-04-Veri-e90b5-33-TC-LOGIN-110-BUG-UI-002--ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-04-Veri-e90b5-33-TC-LOGIN-110-BUG-UI-002--ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js",
+                    "column": 63,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "624d3b91d80ee56b156f-83ff71dd3e6d3d8cd485",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/sign-in-options.spec.js",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "TC-05: Verify that an unregistered mobile number gets no OTP and a clear message (TC_LOGIN_134) (BUG-UI-002)",
+          "ok": false,
+          "tags": [
+            "regression",
+            "knownbug"
+          ],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "ui",
+              "projectName": "ui",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 6,
+                  "status": "failed",
+                  "duration": 28685,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/not found|not registered/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/not found|not registered/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/not found|not registered/i)\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/not found|not registered/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/not found|not registered/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/not found|not registered/i)\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js:84:63",
+                    "location": {
+                      "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js",
+                      "column": 63,
+                      "line": 84
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 82 |\u001b[39m\n \u001b[90m 83 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Verify'\u001b[39m }))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 84 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/not found|not registered/i\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 85 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 86 |\u001b[39m )\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js",
+                        "column": 63,
+                        "line": 84
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/not found|not registered/i)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/not found|not registered/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/not found|not registered/i)\u001b[22m\n\n\n  82 |\n  83 |     await expect(page.getByRole('button', { name: 'Verify' })).toHaveCount(0);\n> 84 |     await expect(page.getByText(/not found|not registered/i)).toBeVisible();\n     |                                                               ^\n  85 |   },\n  86 | );\n  87 |\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js:84:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T10:02:39.731Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-05-Veri-e0838-ge-TC-LOGIN-134-BUG-UI-002--ui\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-05-Veri-e0838-ge-TC-LOGIN-134-BUG-UI-002--ui\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-05-Veri-e0838-ge-TC-LOGIN-134-BUG-UI-002--ui\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\sign-in-options-TC-05-Veri-e0838-ge-TC-LOGIN-134-BUG-UI-002--ui\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\sign-in-options.spec.js",
+                    "column": 63,
+                    "line": 84
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "624d3b91d80ee56b156f-5df8f825655c04b39bcd",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/sign-in-options.spec.js",
+          "line": 75,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "..\\..\\..\\..\\..\\..\\..\\..\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\chat-deleted-message.spec.js",
+      "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/chat-deleted-message.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "another admin of the station",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/chat-deleted-message.spec.js",
+          "line": 171,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-06: Verify that another admin sees \"This message was deleted\" in both the preview and the conversation (Chat TC_03, TC_07) (BUG-UI-008)",
+              "ok": false,
+              "tags": [
+                "regression",
+                "knownbug",
+                "adds-data"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui-chat",
+                  "projectName": "ui-chat",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "failed",
+                      "duration": 37289,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#messages_102844')\nExpected substring: \u001b[32m\"This message \u001b[7mw\u001b[27mas deleted\"\u001b[39m\nReceived string:    \u001b[31m\"This message \u001b[7mh\u001b[27mas \u001b[7mbeen \u001b[27mdeleted\u001b[7m 3:32 PM\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#messages_102844') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#messages_102844')\u001b[22m\n\u001b[2m    33 × locator resolved to <div id=\"messages_102844\" class=\"MuiStack-root css-1nz02wh\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"This message has been deleted 3:32 PM\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#messages_102844')\nExpected substring: \u001b[32m\"This message \u001b[7mw\u001b[27mas deleted\"\u001b[39m\nReceived string:    \u001b[31m\"This message \u001b[7mh\u001b[27mas \u001b[7mbeen \u001b[27mdeleted\u001b[7m 3:32 PM\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#messages_102844') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#messages_102844')\u001b[22m\n\u001b[2m    33 × locator resolved to <div id=\"messages_102844\" class=\"MuiStack-root css-1nz02wh\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"This message has been deleted 3:32 PM\"\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\chat-deleted-message.spec.js:208:50",
+                        "location": {
+                          "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\chat-deleted-message.spec.js",
+                          "column": 50,
+                          "line": 208
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 206 |\u001b[39m       \u001b[36mawait\u001b[39m expect(chatPage\u001b[33m.\u001b[39mchatRow(driverName))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoContainText(sent[\u001b[35m0\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m 207 |\u001b[39m       \u001b[90m// Today: \"You deleted this message\", although Admin B did not delete it\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 208 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mawait\u001b[39m chatPage\u001b[33m.\u001b[39mlastMessage())\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m     |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 209 |\u001b[39m         deletedForOthers\u001b[33m,\u001b[39m\n \u001b[90m 210 |\u001b[39m       )\u001b[33m;\u001b[39m\n \u001b[90m 211 |\u001b[39m     }\u001b[33m,\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\chat-deleted-message.spec.js",
+                            "column": 50,
+                            "line": 208
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#messages_102844')\nExpected substring: \u001b[32m\"This message \u001b[7mw\u001b[27mas deleted\"\u001b[39m\nReceived string:    \u001b[31m\"This message \u001b[7mh\u001b[27mas \u001b[7mbeen \u001b[27mdeleted\u001b[7m 3:32 PM\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#messages_102844') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#messages_102844')\u001b[22m\n\u001b[2m    33 × locator resolved to <div id=\"messages_102844\" class=\"MuiStack-root css-1nz02wh\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"This message has been deleted 3:32 PM\"\u001b[22m\n\n\n  206 |       await expect(chatPage.chatRow(driverName)).not.toContainText(sent[0]);\n  207 |       // Today: \"You deleted this message\", although Admin B did not delete it\n> 208 |       await expect(await chatPage.lastMessage()).toContainText(\n      |                                                  ^\n  209 |         deletedForOthers,\n  210 |       );\n  211 |     },\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\chat-deleted-message.spec.js:208:50"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Log in as ADMIN_B",
+                          "duration": 1635
+                        },
+                        {
+                          "title": "Log in as CHAT_OWNER",
+                          "duration": 1730
+                        }
+                      ],
+                      "startTime": "2026-11-16T10:02:39.787Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\chat-deleted-message-anoth-d7f61-hat-TC-03-TC-07-BUG-UI-008--ui-chat\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\chat-deleted-message-anoth-d7f61-hat-TC-03-TC-07-BUG-UI-008--ui-chat\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\chat-deleted-message-anoth-d7f61-hat-TC-03-TC-07-BUG-UI-008--ui-chat\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\chat-deleted-message.spec.js",
+                        "column": 50,
+                        "line": 208
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c26ce510d5560537594-33a6b37e91f86d680cf5",
+              "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/chat-deleted-message.spec.js",
+              "line": 178,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "..\\..\\..\\..\\..\\..\\..\\..\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+      "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/announcements.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AC3 Content and attachments",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/announcements.spec.js",
+          "line": 451,
+          "column": 6,
+          "specs": [
+            {
+              "title": "ANN-041, ANN-042: Verify that the title does not take more than 100 characters, typed or pasted (BUG-UI-009)",
+              "ok": false,
+              "tags": [
+                "regression",
+                "adds-data",
+                "knownbug"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui-announcements",
+                  "projectName": "ui-announcements",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 31604,
+                      "error": {
+                        "message": "Error: ANN-041 typing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/^[\\d,]+ \\/ 100 characters$/)\nExpected: \u001b[32m\"100 / 100 characters\"\u001b[39m\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - ANN-041 typing getByText(/^[\\d,]+ \\/ 100 characters$/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/^[\\d,]+ \\/ 100 characters$/)\u001b[22m\n",
+                        "stack": "Error: ANN-041 typing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/^[\\d,]+ \\/ 100 characters$/)\nExpected: \u001b[32m\"100 / 100 characters\"\u001b[39m\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - ANN-041 typing getByText(/^[\\d,]+ \\/ 100 characters$/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/^[\\d,]+ \\/ 100 characters$/)\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js:505:66",
+                        "location": {
+                          "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                          "column": 66,
+                          "line": 505
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 503 |\u001b[39m       \u001b[36mawait\u001b[39m announcements\u001b[33m.\u001b[39mtitle\u001b[33m.\u001b[39mpress(\u001b[32m'End'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 504 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mtype(\u001b[32m'X'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// ANN-041: the 101st character\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 505 |\u001b[39m       \u001b[36mawait\u001b[39m expect(announcements\u001b[33m.\u001b[39mtitleCounter\u001b[33m,\u001b[39m \u001b[32m'ANN-041 typing'\u001b[39m)\u001b[33m.\u001b[39mtoHaveText(\n \u001b[90m     |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 506 |\u001b[39m         \u001b[32m'100 / 100 characters'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 507 |\u001b[39m       )\u001b[33m;\u001b[39m\n \u001b[90m 508 |\u001b[39m       \u001b[36mawait\u001b[39m announcements\u001b[33m.\u001b[39mtitle\u001b[33m.\u001b[39mfill(\u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                            "column": 66,
+                            "line": 505
+                          },
+                          "message": "Error: ANN-041 typing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/^[\\d,]+ \\/ 100 characters$/)\nExpected: \u001b[32m\"100 / 100 characters\"\u001b[39m\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - ANN-041 typing getByText(/^[\\d,]+ \\/ 100 characters$/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/^[\\d,]+ \\/ 100 characters$/)\u001b[22m\n\n\n  503 |       await announcements.title.press('End');\n  504 |       await page.keyboard.type('X'); // ANN-041: the 101st character\n> 505 |       await expect(announcements.titleCounter, 'ANN-041 typing').toHaveText(\n      |                                                                  ^\n  506 |         '100 / 100 characters',\n  507 |       );\n  508 |       await announcements.title.fill('');\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js:505:66"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T10:02:56.980Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--f2983-typed-or-pasted-BUG-UI-009--ui-announcements\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--f2983-typed-or-pasted-BUG-UI-009--ui-announcements\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--f2983-typed-or-pasted-BUG-UI-009--ui-announcements\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--f2983-typed-or-pasted-BUG-UI-009--ui-announcements\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                        "column": 66,
+                        "line": 505
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9ba09fd547a28112a3c7-3e6b7f680e9bf9fd4738",
+              "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/announcements.spec.js",
+              "line": 497,
+              "column": 3
+            },
+            {
+              "title": "ANN-045, ANN-046: Verify that the description does not take more than 10,000 characters, typed or pasted (BUG-UI-009)",
+              "ok": false,
+              "tags": [
+                "regression",
+                "adds-data",
+                "knownbug"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui-announcements",
+                  "projectName": "ui-announcements",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 27937,
+                      "error": {
+                        "message": "Error: ANN-045 typing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/^[\\d,]+ \\/ 10,000 characters$/)\nExpected: \u001b[32m\"10,00\u001b[7m0\u001b[27m / 10,000 characters\"\u001b[39m\nReceived: \u001b[31m\"10,00\u001b[7m1\u001b[27m / 10,000 characters\"\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - ANN-045 typing getByText(/^[\\d,]+ \\/ 10,000 characters$/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/^[\\d,]+ \\/ 10,000 characters$/)\u001b[22m\n\u001b[2m    33 × locator resolved to <p class=\"MuiTypography-root MuiTypography-body1 css-1o3eeek\">10,001 / 10,000 characters</p>\u001b[22m\n\u001b[2m       - unexpected value \"10,001 / 10,000 characters\"\u001b[22m\n",
+                        "stack": "Error: ANN-045 typing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/^[\\d,]+ \\/ 10,000 characters$/)\nExpected: \u001b[32m\"10,00\u001b[7m0\u001b[27m / 10,000 characters\"\u001b[39m\nReceived: \u001b[31m\"10,00\u001b[7m1\u001b[27m / 10,000 characters\"\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - ANN-045 typing getByText(/^[\\d,]+ \\/ 10,000 characters$/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/^[\\d,]+ \\/ 10,000 characters$/)\u001b[22m\n\u001b[2m    33 × locator resolved to <p class=\"MuiTypography-root MuiTypography-body1 css-1o3eeek\">10,001 / 10,000 characters</p>\u001b[22m\n\u001b[2m       - unexpected value \"10,001 / 10,000 characters\"\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js:529:9",
+                        "location": {
+                          "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                          "column": 9,
+                          "line": 529
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 527 |\u001b[39m         announcements\u001b[33m.\u001b[39mdescriptionCounter\u001b[33m,\u001b[39m\n \u001b[90m 528 |\u001b[39m         \u001b[32m'ANN-045 typing'\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 529 |\u001b[39m       )\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'10,000 / 10,000 characters'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 530 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Control+A'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 531 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Delete'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 532 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39minsertText(\u001b[32m'e'\u001b[39m\u001b[33m.\u001b[39mrepeat(\u001b[35m10050\u001b[39m))\u001b[33m;\u001b[39m \u001b[90m// ANN-046: like a paste\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                            "column": 9,
+                            "line": 529
+                          },
+                          "message": "Error: ANN-045 typing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/^[\\d,]+ \\/ 10,000 characters$/)\nExpected: \u001b[32m\"10,00\u001b[7m0\u001b[27m / 10,000 characters\"\u001b[39m\nReceived: \u001b[31m\"10,00\u001b[7m1\u001b[27m / 10,000 characters\"\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - ANN-045 typing getByText(/^[\\d,]+ \\/ 10,000 characters$/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/^[\\d,]+ \\/ 10,000 characters$/)\u001b[22m\n\u001b[2m    33 × locator resolved to <p class=\"MuiTypography-root MuiTypography-body1 css-1o3eeek\">10,001 / 10,000 characters</p>\u001b[22m\n\u001b[2m       - unexpected value \"10,001 / 10,000 characters\"\u001b[22m\n\n\n  527 |         announcements.descriptionCounter,\n  528 |         'ANN-045 typing',\n> 529 |       ).toHaveText('10,000 / 10,000 characters');\n      |         ^\n  530 |       await page.keyboard.press('Control+A');\n  531 |       await page.keyboard.press('Delete');\n  532 |       await page.keyboard.insertText('e'.repeat(10050)); // ANN-046: like a paste\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js:529:9"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T10:03:29.995Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--84195-typed-or-pasted-BUG-UI-009--ui-announcements\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--84195-typed-or-pasted-BUG-UI-009--ui-announcements\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--84195-typed-or-pasted-BUG-UI-009--ui-announcements\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC3-Content--84195-typed-or-pasted-BUG-UI-009--ui-announcements\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                        "column": 9,
+                        "line": 529
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9ba09fd547a28112a3c7-a4f0edfdbd8e68ac5dc5",
+              "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/announcements.spec.js",
+              "line": 518,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "AC9, AC10 Activity and History",
+          "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/announcements.spec.js",
+          "line": 1160,
+          "column": 6,
+          "specs": [
+            {
+              "title": "ANN-137: Verify that each activity row shows the driver's station and seen date/time (BUG-UI-010)",
+              "ok": false,
+              "tags": [
+                "regression",
+                "adds-data",
+                "knownbug"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "ui-announcements",
+                  "projectName": "ui-announcements",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30903,
+                      "error": {
+                        "message": "Error: the row has the station\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ })\nExpected substring: \u001b[32m\"DYY6\"\u001b[39m\nReceived string:    \u001b[31m\"CEChad ElnahalNot seen\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - the row has the station getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ })\u001b[22m\n\u001b[2m    28 × locator resolved to <tr data-index=\"0\" data-item-index=\"0\" data-known-size=\"34\" item=\"[object Object]\" class=\"MuiTableRow-root MuiTableRow-hover css-1uekmho\">…</tr>\u001b[22m\n\u001b[2m       - unexpected value \"CEChad ElnahalNot seen\"\u001b[22m\n",
+                        "stack": "Error: the row has the station\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ })\nExpected substring: \u001b[32m\"DYY6\"\u001b[39m\nReceived string:    \u001b[31m\"CEChad ElnahalNot seen\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - the row has the station getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ })\u001b[22m\n\u001b[2m    28 × locator resolved to <tr data-index=\"0\" data-item-index=\"0\" data-known-size=\"34\" item=\"[object Object]\" class=\"MuiTableRow-root MuiTableRow-hover css-1uekmho\">…</tr>\u001b[22m\n\u001b[2m       - unexpected value \"CEChad ElnahalNot seen\"\u001b[22m\n\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js:1211:52",
+                        "location": {
+                          "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                          "column": 52,
+                          "line": 1211
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 1209 |\u001b[39m         \u001b[33m.\u001b[39mgetByRole(\u001b[32m'table'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Driver activity list'\u001b[39m })\n \u001b[90m 1210 |\u001b[39m         \u001b[33m.\u001b[39mgetByRole(\u001b[32m'row'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(driverName()) })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1211 |\u001b[39m       \u001b[36mawait\u001b[39m expect(row\u001b[33m,\u001b[39m \u001b[32m'the row has the station'\u001b[39m)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m      |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 1212 |\u001b[39m         process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mANN_STATION_CODE\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 1213 |\u001b[39m       )\u001b[33m;\u001b[39m\n \u001b[90m 1214 |\u001b[39m     }\u001b[33m,\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                            "column": 52,
+                            "line": 1211
+                          },
+                          "message": "Error: the row has the station\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ })\nExpected substring: \u001b[32m\"DYY6\"\u001b[39m\nReceived string:    \u001b[31m\"CEChad ElnahalNot seen\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - the row has the station getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('table', { name: 'Driver activity list' }).getByRole('row', { name: /Chad Elnahal/ })\u001b[22m\n\u001b[2m    28 × locator resolved to <tr data-index=\"0\" data-item-index=\"0\" data-known-size=\"34\" item=\"[object Object]\" class=\"MuiTableRow-root MuiTableRow-hover css-1uekmho\">…</tr>\u001b[22m\n\u001b[2m       - unexpected value \"CEChad ElnahalNot seen\"\u001b[22m\n\n\n  1209 |         .getByRole('table', { name: 'Driver activity list' })\n  1210 |         .getByRole('row', { name: new RegExp(driverName()) });\n> 1211 |       await expect(row, 'the row has the station').toContainText(\n       |                                                    ^\n  1212 |         process.env.ANN_STATION_CODE,\n  1213 |       );\n  1214 |     },\n    at C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js:1211:52"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Log in as ANN_OWNER",
+                          "duration": 1607
+                        }
+                      ],
+                      "startTime": "2026-11-16T10:03:59.076Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API call",
+                          "contentType": "text/plain",
+                          "body": "QWRkcmVzczogaHR0cHM6Ly9zdGFnaW5nLWFwaS5mbGVldC5sbWRtYXguY29tL2xtZC9wcmZzcnYvcGVyZi11c2VyL3YzL3VzZXJzClN0YXR1czogMjAwCgpBbnN3ZXI6CnsKICAic3VjY2VzcyI6IHRydWUsCiAgIm1lc3NhZ2UiOiAiU3VjY2VzcyIsCiAgImRhdGEiOiBbCiAgICB7CiAgICAgICJpZCI6ICIxMzk1MyIsCiAgICAgICJuYW1lIjogImFiY2QiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IHRydWUsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI2MTUyOTc1OCIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiBudWxsLAogICAgICAic3RhdGlvbnMiOiBbXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogZmFsc2UKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDE1MCIsCiAgICAgICJuYW1lIjogImFiaGlqZWV0IiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI4MzQyMDQzNiIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzg1NzMiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDI1NyIsCiAgICAgICJuYW1lIjogIkFrc2giLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IHRydWUsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiODcxMTU4MzciLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM4NTk4IiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDU3OCwKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzM4MTgiLAogICAgICAibmFtZSI6ICJBbGZyZWQgQWRhbXMiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjE1OTk4Njc4IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODQ2MyIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE5MDkzIiwKICAgICAgIm5hbWUiOiAiYWxpYXlhIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICIyNjA0NTQxNSIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzc4MjgiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDM2NyIsCiAgICAgICJuYW1lIjogIkFtbWFyIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI3NDY1Njc1NSIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzg2MzciLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMzgzMiIsCiAgICAgICJuYW1lIjogIkFydGgiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJvd25lciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNTg1MDYxNjciLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjEiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMSwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiBudWxsCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDEsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogbnVsbAogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogZmFsc2UKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDE4NyIsCiAgICAgICJuYW1lIjogIkFTREZBU0QiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjQ3NDAyOTY0IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODU4OSIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MjUzIiwKICAgICAgIm5hbWUiOiAiYnVyZ29zIG1hcmxpbiIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI0NjgzMjYyMyIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiBudWxsLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiAyLAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6IG51bGwKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTM4NDgiLAogICAgICAibmFtZSI6ICJDaGFkIEVsbmFoYWwiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IGZhbHNlLAogICAgICAiYWNjb3VudF9pZCI6ICI3MDc5Mjg0MCIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzMyNTYiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxODU1OCIsCiAgICAgICJuYW1lIjogImNoZWNraW5nZ2dnIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiB0cnVlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiODc1MDg5MjIiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogW10sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTg1ODIiLAogICAgICAibmFtZSI6ICJjaGVja2luZ2d0d28iLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjIyMTE4MTU4IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzQ1MyIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE5NTI1IiwKICAgICAgIm5hbWUiOiAiY2hlY2traW5nZ2ciLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IHRydWUsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI5MTA1MTcxOSIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiBudWxsLAogICAgICAic3RhdGlvbnMiOiBbXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogZmFsc2UKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDAzNCIsCiAgICAgICJuYW1lIjogImNoZWVyeSIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogZmFsc2UsCiAgICAgICJhY2NvdW50X2lkIjogIjM1Mjc1MDU5IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODU1MCIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDIsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxODU1MyIsCiAgICAgICJuYW1lIjogImRldiIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiOTE1NDg3MjciLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM3NDMxIiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTg2NzQiLAogICAgICAibmFtZSI6ICJkaGF2aWkiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjI1MzczNTkxIiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzUwNiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MTc4IiwKICAgICAgIm5hbWUiOiAiZGl2YW4iLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjI3MTg1OTU0IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODU4MSIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjMzOTU5IiwKICAgICAgIm5hbWUiOiAiZHNmIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI2NTAzMjg3OSIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzg1MDYiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiAyLAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzQwMzUiLAogICAgICAibmFtZSI6ICJkc2ZzZCIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiODUyNzE4MjUiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM4NTUxIiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTk2MTEiLAogICAgICAibmFtZSI6ICJkc3ZzZGQiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IHRydWUsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNDk4MDkzNzciLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM4Mjg1IiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDU3OCwKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTg0MjQiLAogICAgICAibmFtZSI6ICJmZGZkZiIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogdHJ1ZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI1Nzc5Mzc1MCIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzczMzIiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDA1MCIsCiAgICAgICJuYW1lIjogImZkZ2ZnIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiB0cnVlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNDc2NjM3MTIiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogW10sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTg1NTYiLAogICAgICAibmFtZSI6ICJmZWVlZWVlZWZlIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjQwMDkyMzQ3IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICIyIiwKICAgICAgImRyaXZlcl9pZCI6IG51bGwsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDIsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogbnVsbAogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogZmFsc2UKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzMzk1OCIsCiAgICAgICJuYW1lIjogImZnZmciLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjI2MzU5NDE4IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODUwNSIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MTc5IiwKICAgICAgIm5hbWUiOiAiZ2ltbXkiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjMyODMzNzMwIiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODU4MiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE4OTkyIiwKICAgICAgIm5hbWUiOiAiZ2lycmFqIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI1NzcwODgwNCIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzc3NDIiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxODk5MyIsCiAgICAgICJuYW1lIjogImdpcnJpIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI5NjIwMjg2NyIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzc3NDMiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxOTYxNSIsCiAgICAgICJuYW1lIjogImd5YW5pIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IGZhbHNlLAogICAgICAiYWNjb3VudF9pZCI6ICI0MDcwNTI1MiIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiBudWxsLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiAyLAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6IG51bGwKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDU3OCwKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiBudWxsCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiBmYWxzZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE1MjQwIiwKICAgICAgIm5hbWUiOiAiSGFzc2FuIFNhbWJvbGFoIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiB0cnVlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNzAzMTUwNzAiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogW10sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTg2NjUiLAogICAgICAibmFtZSI6ICJoZWVsIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICIyMjc0MjIxNiIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzc1MDAiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxOTAxNyIsCiAgICAgICJuYW1lIjogImphbmVpbCIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNTgwNTA5MzYiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM3NzY2IiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzQxODAiLAogICAgICAibmFtZSI6ICJqZWtreSIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiODkyMjM1NTQiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM4NTgzIiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDU3OCwKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTUxMjQiLAogICAgICAibmFtZSI6ICJqZmdoIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBmYWxzZSwKICAgICAgImFjY291bnRfaWQiOiAiMTY5NjU0MTUiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM0MzkzIiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDU3OCwKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE5MDEyIiwKICAgICAgIm5hbWUiOiAiamppYWEiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjMzMzYzMTQ4IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzc2MiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MDUyIiwKICAgICAgIm5hbWUiOiAia2FwaWwiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjMxNjk0NTY1IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODU1NyIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE5MDg4IiwKICAgICAgIm5hbWUiOiAia2lhYWFhIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IGZhbHNlLAogICAgICAiYWNjb3VudF9pZCI6ICI3NzUyNDgyMiIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzc4MjMiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiAyLAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTg3MDUiLAogICAgICAibmFtZSI6ICJrb2FsYSIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogZmFsc2UsCiAgICAgICJhY2NvdW50X2lkIjogIjI5MjM2ODk3IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzUzNyIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzMzk1MSIsCiAgICAgICJuYW1lIjogIk1heGltbyIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImRyaXZlciIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNzE3ODA5NjIiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjQiLAogICAgICAiZHJpdmVyX2lkIjogIjM4NDk5IiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTg1NzUiLAogICAgICAibmFtZSI6ICJtb2hhbmEiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjU3OTUwMzg5IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzQ0NiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE3MzIxIiwKICAgICAgIm5hbWUiOiAibXVsdGlwbGUiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IHRydWUsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBmYWxzZSwKICAgICAgImFjY291bnRfaWQiOiAiMjQwNjc1MTYiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogIjM4NjM5IiwKICAgICAgInN0YXRpb25zIjogW10sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzQ0MjMiLAogICAgICAibmFtZSI6ICJuZXdseSIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBmYWxzZSwKICAgICAgImFjY291bnRfaWQiOiAiNzE1NzI2OTIiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiBudWxsCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiBmYWxzZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0NDg4IiwKICAgICAgIm5hbWUiOiAicGFybGUiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiODIyNzQ3NTMiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiBudWxsCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiBmYWxzZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE4NjU4IiwKICAgICAgIm5hbWUiOiAicGVyY2hhbmdlIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI0MjAxNzQ5NCIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzc0OTQiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDM3OCIsCiAgICAgICJuYW1lIjogInFhIGFkbWluIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjc2NzQzNjc2IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICIyIiwKICAgICAgImRyaXZlcl9pZCI6ICIzODY0NiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0Mzc3IiwKICAgICAgIm5hbWUiOiAicWEgZHJpdmVyIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICIzODEyMTc2MyIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzg2NDUiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDQxNyIsCiAgICAgICJuYW1lIjogInF3ZXJ0eSIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBmYWxzZSwKICAgICAgImFjY291bnRfaWQiOiAiMTg4NTE4NTMiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiBudWxsCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiBmYWxzZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE4NTU0IiwKICAgICAgIm5hbWUiOiAicmFtYW4iLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjQ4MTU2NTczIiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzQzMiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjMzOTk0IiwKICAgICAgIm5hbWUiOiAicmVldHUiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjQ5OTk3NDc4IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODUyNiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjE5NjY3IiwKICAgICAgIm5hbWUiOiAicmlja3kiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjg0MjMxNTY5IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODMzNSIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MzU3IiwKICAgICAgIm5hbWUiOiAiU0FEQVNEIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjY3NTQ3NzA2IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICIyIiwKICAgICAgImRyaXZlcl9pZCI6ICIzODYzMyIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDIsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxOTYxNCIsCiAgICAgICJuYW1lIjogInNjc2MiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiODg1Mjg0NDciLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogIjM4Mjg4IiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogNCwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDU3OCwKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiB0cnVlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTkwMTMiLAogICAgICAibmFtZSI6ICJzZGNzIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI5NDczMDYwMCIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzc3NjMiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxOTU1MSIsCiAgICAgICJuYW1lIjogInNkc2QiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjI0MTA5OTM3IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODI0OCIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MzU4IiwKICAgICAgIm5hbWUiOiAiU0RTRlMiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiMzI2MTM1NjYiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogIjM4NjM0IiwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDU3OCwKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiAicHJvbW90ZWQiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MDg2IiwKICAgICAgIm5hbWUiOiAic2ZhcyIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI4OTcxNjA5OSIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzg2MzIiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzMzk0NiIsCiAgICAgICJuYW1lIjogInNmc2YiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjIzNzEzMTI0IiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzODQ5NCIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDIsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0NDE2IiwKICAgICAgIm5hbWUiOiAidGVtcGFkbWluIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IGZhbHNlLAogICAgICAiYWNjb3VudF9pZCI6ICI3ODI0MjQ3MyIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiBudWxsLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiAyLAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6IG51bGwKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTQyOTciLAogICAgICAibmFtZSI6ICJ0ZXN0IiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiB0cnVlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNzM1MzE5OTQiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogW10sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzQ0MzEiLAogICAgICAibmFtZSI6ICJ0ZXN0YWRtaW5laWdodCIsCiAgICAgICJlbWFpbCI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19kZWxldGVkIjogZmFsc2UsCiAgICAgICJyb2xlIjogImFkbWluIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICIyNzk3MTI3NyIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiBudWxsLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiAyLAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6IG51bGwKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzQ0MzYiLAogICAgICAibmFtZSI6ICJ0ZXN0YWRtaW5uaW5lIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjI5NDg4MTEzIiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICIyIiwKICAgICAgImRyaXZlcl9pZCI6IG51bGwsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDIsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogbnVsbAogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogZmFsc2UKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzNDQzMCIsCiAgICAgICJuYW1lIjogInRlc3RhZG1pbnNldmVuIiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiYWRtaW4iLAogICAgICAicGVyZl9lbWFpbCI6IGZhbHNlLAogICAgICAiYWNjb3VudF9pZCI6ICI3NTQyNzQ3MyIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiMiIsCiAgICAgICJkcml2ZXJfaWQiOiBudWxsLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiAyLAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNDc3LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6IG51bGwKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzQ0MjUiLAogICAgICAibmFtZSI6ICJ0ZXN0YWRtaW5zaXgiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNDE3NTM1MjciLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiBudWxsCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDIsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA1NzgsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogbnVsbAogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogZmFsc2UKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxODcwNCIsCiAgICAgICJuYW1lIjogInVoaWwiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjQ5OTM3ODczIiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzUzNiIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxNzM5MiIsCiAgICAgICJuYW1lIjogInZpY2t5IiwKICAgICAgImVtYWlsIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX2RlbGV0ZWQiOiBmYWxzZSwKICAgICAgInJvbGUiOiAiZHJpdmVyIiwKICAgICAgInBlcmZfZW1haWwiOiBudWxsLAogICAgICAiYWNjb3VudF9pZCI6ICI2MzAxOTM5MCIsCiAgICAgICJwaG9uZSI6ICIqKiogaGlkZGVuICoqKiIsCiAgICAgICJpc19waG9uZV92ZXJpZmllZCI6IGZhbHNlLAogICAgICAiZG9iIjogbnVsbCwKICAgICAgInR5cGUiOiAiNCIsCiAgICAgICJkcml2ZXJfaWQiOiAiMzY3MDQiLAogICAgICAic3RhdGlvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgInR5cGUiOiA0LAogICAgICAgICAgImFzc2lnbmVkIjogdHJ1ZSwKICAgICAgICAgICJzdGF0aW9uX2lkIjogNTc4LAogICAgICAgICAgInBlcm1pc3Npb25fdXBncmFkZSI6ICJwcm9tb3RlZCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJoYXNfcHJvbW90ZWRfc3RhdGlvbiI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxODY2OSIsCiAgICAgICJuYW1lIjogInZpc2h1dXUiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJkcml2ZXIiLAogICAgICAicGVyZl9lbWFpbCI6IG51bGwsCiAgICAgICJhY2NvdW50X2lkIjogIjc0NjUyNDIzIiwKICAgICAgInBob25lIjogIioqKiBoaWRkZW4gKioqIiwKICAgICAgImlzX3Bob25lX3ZlcmlmaWVkIjogZmFsc2UsCiAgICAgICJkb2IiOiBudWxsLAogICAgICAidHlwZSI6ICI0IiwKICAgICAgImRyaXZlcl9pZCI6ICIzNzUwMSIsCiAgICAgICJzdGF0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAidHlwZSI6IDQsCiAgICAgICAgICAiYXNzaWduZWQiOiB0cnVlLAogICAgICAgICAgInN0YXRpb25faWQiOiA0NzcsCiAgICAgICAgICAicGVybWlzc2lvbl91cGdyYWRlIjogInByb21vdGVkIgogICAgICAgIH0KICAgICAgXSwKICAgICAgImhhc19wcm9tb3RlZF9zdGF0aW9uIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM0MTQ5IiwKICAgICAgIm5hbWUiOiAid2F5cmEiLAogICAgICAiZW1haWwiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfZGVsZXRlZCI6IGZhbHNlLAogICAgICAicm9sZSI6ICJhZG1pbiIsCiAgICAgICJwZXJmX2VtYWlsIjogbnVsbCwKICAgICAgImFjY291bnRfaWQiOiAiNjMzNTU2MzEiLAogICAgICAicGhvbmUiOiAiKioqIGhpZGRlbiAqKioiLAogICAgICAiaXNfcGhvbmVfdmVyaWZpZWQiOiBmYWxzZSwKICAgICAgImRvYiI6IG51bGwsCiAgICAgICJ0eXBlIjogIjIiLAogICAgICAiZHJpdmVyX2lkIjogbnVsbCwKICAgICAgInN0YXRpb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJ0eXBlIjogMiwKICAgICAgICAgICJhc3NpZ25lZCI6IHRydWUsCiAgICAgICAgICAic3RhdGlvbl9pZCI6IDQ3NywKICAgICAgICAgICJwZXJtaXNzaW9uX3VwZ3JhZGUiOiBudWxsCiAgICAgICAgfQogICAgICBdLAogICAgICAiaGFzX3Byb21vdGVkX3N0YXRpb24iOiBmYWxzZQogICAgfQogIF0sCiAgIm1ldGFkYXRhIjogbnVsbCwKICAic3RhdHVzIjogMjAwLAogICJhY3Rpb24iOiAidXNlcl9jb250cm9sbGVyIiwKICAic2lnbmF0dXJlIjogIjE3OTQ4MjM0NDAxOTgudHVBODhBRDhnd0RlciIsCiAgInR5cGUiOiAiIiwKICAiaWQiOiBudWxsCn0="
+                        },
+                        {
+                          "name": "API call",
+                          "contentType": "text/plain",
+                          "body": "QWRkcmVzczogaHR0cHM6Ly9zdGFnaW5nLWFwaS5mbGVldC5sbWRtYXguY29tL2xtZC9wcmZzcnYvYW5ub3VuY2VtZW50cy92MS9jcmVhdGUKU3RhdHVzOiAyMDAKCkFuc3dlcjoKewogICJzdWNjZXNzIjogdHJ1ZSwKICAibWVzc2FnZSI6ICJBbm5vdW5jZW1lbnQgc2VudCB0byAxIGRyaXZlciIsCiAgImRhdGEiOiB7CiAgICAiYW5ub3VuY2VtZW50X2lkIjogIjZhZmFkNTEwYTNiOTZmMTNlOGM5ZTBkZSIsCiAgICAic2VudF90byI6IDEsCiAgICAiaXNfZHVwbGljYXRlIjogZmFsc2UKICB9LAogICJtZXRhZGF0YSI6IG51bGwsCiAgInN0YXR1cyI6IDIwMCwKICAiYWN0aW9uIjogImFubm91bmNlbWVudF9jb250cm9sbGVyIiwKICAic2lnbmF0dXJlIjogIjE3OTQ4MjM0NDA2MjQuYjF5S3hodWJVbmZlSCIsCiAgInR5cGUiOiAiIiwKICAiaWQiOiBudWxsCn0="
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC9-AC10-Act-d3e31--seen-date-time-BUG-UI-010--ui-announcements\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC9-AC10-Act-d3e31--seen-date-time-BUG-UI-010--ui-announcements\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC9-AC10-Act-d3e31--seen-date-time-BUG-UI-010--ui-announcements\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\docs\\jira-proof\\_ui-run\\announcements-AC9-AC10-Act-d3e31--seen-date-time-BUG-UI-010--ui-announcements\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Softsensor\\Downloads\\LMDmaxRegressionSuite-QA-main\\tests\\ui\\announcements.spec.js",
+                        "column": 52,
+                        "line": 1211
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9ba09fd547a28112a3c7-cb09ad96496953bff66e",
+              "file": "../../../../../../../../Softsensor/Downloads/LMDmaxRegressionSuite-QA-main/tests/ui/announcements.spec.js",
+              "line": 1197,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T10:02:37.160Z",
+    "duration": 113216.18,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 11,
+    "flaky": 0
+  }
+}

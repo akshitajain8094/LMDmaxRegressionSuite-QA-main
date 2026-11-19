@@ -1,0 +1,118 @@
+=== TC-05: Verify that an inactive driver cannot be the rescuer (BUG-API-022)
+tests/api/rescues/rescue-journeys.spec.js:406
+
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Rescue data saved successfully",
+  "data": [
+    {
+      "company_id": "541",
+      "date": "2026-11-11T00:00:00.000Z",
+      "caller_id": 38267,
+      "rescuer_id": 38272,
+      "metrics": {
+        "caller_name": "Jordan Whitaker",
+        "rescuer_name": "Inactive test driver",
+        "status": "Completed",
+        "number_of_packages": 42,
+        "number_of_stops": 18,
+        "reason": "Rescue by an inactive driver."
+      },
+      "msg_sent": false,
+      "msg_id": null,
+      "_id": "6afacd05a3b96f13e8c9a48b",
+      "created_at": "2026-11-16T09:29:41.630Z",
+      "updated_at": "2026-11-16T09:29:41.630Z",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821381621.it1qjLiBVOJb1",
+  "type": "success",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue?date=2026-11-11
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "ok",
+  "data": [
+    {
+      "metrics": {
+        "caller_name": "Jordan Whitaker",
+        "rescuer_name": "Inactive test driver",
+        "status": "Completed",
+        "number_of_packages": 42,
+        "number_of_stops": 18,
+        "reason": "Rescue by an inactive driver."
+      },
+      "_id": "6afacd05a3b96f13e8c9a48b",
+      "company_id": "541",
+      "date": "2026-11-11T00:00:00.000Z",
+      "caller_id": 38267,
+      "rescuer_id": 38272,
+      "msg_sent": false,
+      "msg_id": null,
+      "created_at": "2026-11-16T09:29:41.630Z",
+      "updated_at": "2026-11-16T09:29:41.630Z",
+      "__v": 0
+    }
+  ],
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821381945.YyhdY4jD9AvWU",
+  "type": "success",
+  "id": null
+}
+
+---
+Address: https://staging-api.fleet.lmdmax.com/lmd/prfsrv/rescue/v2/rescue?_id=6afacd05a3b96f13e8c9a48b&rescuer_id=38272&caller_id=38267&date=2026-11-11T00%3A00%3A00.000Z
+Status: 200
+
+Answer:
+{
+  "success": true,
+  "message": "Rescue data deleted successfully",
+  "data": {
+    "metrics": {
+      "caller_name": "Jordan Whitaker",
+      "rescuer_name": "Inactive test driver",
+      "status": "Completed",
+      "number_of_packages": 42,
+      "number_of_stops": 18,
+      "reason": "Rescue by an inactive driver."
+    },
+    "_id": "6afacd05a3b96f13e8c9a48b",
+    "company_id": "541",
+    "date": "2026-11-11T00:00:00.000Z",
+    "caller_id": 38267,
+    "rescuer_id": 38272,
+    "msg_sent": false,
+    "msg_id": null,
+    "created_at": "2026-11-16T09:29:41.630Z",
+    "updated_at": "2026-11-16T09:29:41.630Z",
+    "__v": 0
+  },
+  "metadata": null,
+  "status": 200,
+  "action": null,
+  "signature": "1794821382250.SOp0P8JT8Idcy",
+  "type": "success",
+  "id": null
+}
+
+FAILED CHECK:
+Error: expect(received).toBe(expected) // Object.is equality
+Expected: 400
+Received: 200

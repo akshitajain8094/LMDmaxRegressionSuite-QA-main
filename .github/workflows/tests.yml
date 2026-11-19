@@ -1,0 +1,107 @@
+name: Tests
+
+# When this workflow runs
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: '30 2 * * *' # every day at 08:00 IST
+  workflow_dispatch: # the "Run workflow" button in the Actions tab
+    inputs:
+      suite:
+        description: Which tests to run
+        type: choice
+        options: [smoke, pr, regression, knownbug]
+        default: regression
+
+# Settings for the tests (on your computer they come from .env.staging)
+env:
+  API_BASE_URL: https://staging-api.fleet.lmdmax.com
+  UI_BASE_URL: https://staging.performance.lmdmax.com
+  LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
+  LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+  TEST_STATION_ID: '541' # station DYY1
+  MESSAGING_BASE_URL: https://staging-messaging.fleet.lmdmax.com
+  CHAT_STATION_ID: '578'
+  CHAT_STATION_CODE: AQWA
+  CHAT_DRIVER_NAME: Aksh
+  CHAT_OWNER_EMAIL: ${{ secrets.CHAT_OWNER_EMAIL }} # optional: without it the chat tests use the test user
+  CHAT_OWNER_PASSWORD: ${{ secrets.CHAT_OWNER_PASSWORD }}
+  ADMIN_B_EMAIL: ${{ secrets.ADMIN_B_EMAIL }} # optional: the two-admin chat tests skip without it
+  ADMIN_B_PASSWORD: ${{ secrets.ADMIN_B_PASSWORD }}
+  PROMOTED_ADMIN_EMAIL: ${{ secrets.PROMOTED_ADMIN_EMAIL }}
+  PROMOTED_ADMIN_PASSWORD: ${{ secrets.PROMOTED_ADMIN_PASSWORD }}
+  ANN_STATION_ID: '477' # announcements: station DYY6, sent only to Chad Elnahal (@adds-data)
+  ANN_STATION_CODE: DYY6
+  ANN_DRIVER_NAME: Chad Elnahal
+  ANN_OWNER_EMAIL: ${{ secrets.CHAT_OWNER_EMAIL }} # the same owner (Arth) as the chat tests
+  ANN_OWNER_PASSWORD: ${{ secrets.CHAT_OWNER_PASSWORD }}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      # Only one of the next four steps runs, depending on what started the workflow
+      - name: Run @pr tests (pull request)
+        if: github.event_name == 'pull_request'
+        run: npx playwright test --grep @pr
+
+      - name: Run @smoke tests (push to main)
+        if: github.event_name == 'push'
+        run: npx playwright test --grep @smoke
+
+      - name: Run @regression tests (every day)
+        if: github.event_name == 'schedule'
+        run: npx playwright test --grep @regression
+
+      - name: Run the chosen tests (manual run)
+        if: github.event_name == 'workflow_dispatch'
+        run: npx playwright test --grep @${{ inputs.suite }}
+
+      # The UI files of chat and announcements wait for their API files and are skipped while those have
+      # known-bug failures. Run them here on their own (also after a failed step), adding to the same Allure
+      # results; the HTML report of the step above is kept.
+      - name: Run the chat and announcement UI tests
+        if: ${{ !cancelled() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') }}
+        env:
+          KEEP_ALLURE_RESULTS: 'yes'
+        run: npx playwright test --project=ui-chat --project=ui-announcements --no-deps --workers=1 --reporter=list,allure-playwright --grep @${{ github.event_name == 'schedule' && 'regression' || inputs.suite }}
+
+      - name: Build Allure report
+        if: ${{ !cancelled() }}
+        run: npx allure awesome allure-results --single-file -o allure-report # one file: opens with a double-click
+
+      - name: Upload reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: reports-${{ github.run_number }}
+          overwrite: true # lets "Re-run job" replace the reports of the earlier attempt
+          path: |
+            playwright-report/
+            allure-report/
+          retention-days: 14
